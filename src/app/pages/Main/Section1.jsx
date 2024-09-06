@@ -25,6 +25,9 @@ export const Section1 = ({ section3Ref }) => {
 
   useEffect(() => {
 
+    gsap.set(titleRef.current, { opacity: 0 })
+    gsap.set(".one-button, .one-button-transparent, .one-description", { opacity: 0 })
+
     const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
     gsap.fromTo(titleRef.current, { rotationX: 70, opacity: 0, transformOrigin: 'center bottom', transformPerspective: 500, },
       { rotationX: 0, opacity: 1, duration: 1.25, ease: 'back.out', delay: 0.75 }
