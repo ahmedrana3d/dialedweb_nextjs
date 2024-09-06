@@ -19,7 +19,7 @@ const ProjectPage = () => {
         window.scrollTo(0, 0);
       }, []);
 
-      const hoverSound = new Audio('/fx.mp3');
+      const hoverSound = typeof Audio !== 'undefined' ? new Audio('/fx.mp3') : null;
 
       const hoverSoundStart = () => {
         if (!isMobile) {
