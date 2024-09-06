@@ -5,16 +5,19 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 const ProjectPage = () => {
 
-    useEffect(() => {
-        // Scroll to the top when the component mounts
-        window.scrollTo(0, 0);
-      }, []);
-
     const handleClick = (linkUrl) => {
         window.open(linkUrl, '_blank');
       };
 
-      const isMobile = window.innerWidth <= 768;
+      const [isMobile, setIsMobile] = useState(false);
+
+      useEffect(() => {
+        if (typeof window !== 'undefined') {
+          setIsMobile(window.innerWidth <= 768);
+        }
+    
+        window.scrollTo(0, 0);
+      }, []);
 
       const hoverSound = new Audio('/fx.mp3');
 

@@ -8,14 +8,17 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
-const isMobile = window.innerWidth <= 768;
-
 const VisualizationPage = () => {
 
-    useEffect(() => {
-        // Scroll to the top when the component mounts
-        window.scrollTo(0, 0);
-      }, []);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth <= 768);
+    }
+
+    window.scrollTo(0, 0);
+  }, []);
 
       useEffect(() => {
     
