@@ -1,0 +1,242 @@
+.writing-home {
+    top: calc(-0.1vw) !important;
+    left: calc(-1vw - 5px) !important;
+    right: calc(-1vw - 5px) !important;
+    width: calc(100% + 10px + 2vw) !important;
+    pointer-events: none;
+  }
+  
+  .animateWritingHome {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 2s linear alternate infinite;
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .noAnimate {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition:  all ease-in-out 0.8s;
+  }
+  
+  
+  
+  
+  .content {
+      padding: var(--page-padding);
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      min-height: 100vh;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+  }
+  
+  @media screen and (min-width: 53em) {
+      body {
+          --page-padding: 2rem 3rem;
+      }
+  
+      .frame {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: grid;
+          flex-direction: unset;
+          grid-template-columns: auto auto 1fr;
+          grid-template-rows: auto auto;
+          align-content: space-between;
+          grid-template-areas: 'title buttons sponsor' 'tags hire sub';
+      }
+  
+      .frame #cdawrap, .frame__sub {
+          justify-self: end;
+      }
+  
+      .frame__title {
+          margin: 0;
+      }
+  
+      .frame__tags {
+          margin: 0;
+      }
+  }
+  
+  /* Darkroom by Kaploom®Creative House */
+  /* https://darkroom.kaploom.com/ */
+  
+  .sprite {
+      visibility: hidden;
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      overflow: hidden;
+  }
+  
+  .emoji {
+      display: inline-block;
+      vertical-align: middle;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      isolation: isolate;
+  }
+  
+  .emoji svg {
+      display: block;
+      width: 0.9rem;
+      height: 0.9rem;
+  }
+  
+  .logo {
+      width: auto;
+      height: 0.85rem;
+  }
+  
+  /* Screen Reader */
+  .screen-reader-text {
+      position: absolute !important;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      margin: 0;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      border: 0;
+  }
+  
+  /* Rail */
+  
+  .rail {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: end;
+      justify-content: flex-start;
+      width: 100%;
+      overflow: hidden;
+      pointer-events: none;
+  }
+  
+  .rail_container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .rail_sizing {
+      position: relative;
+      opacity: 0;
+      height: auto;
+      width: 420vw;
+  
+      @media screen and (min-width: 53em) {
+          width: 232vw;
+      }
+  }
+  
+  .rail_clip {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      -webkit-clip-path: url("#contentTitle");
+      clip-path: url("#contentTitle");
+      animation: clip-anim 20s linear infinite;
+  }
+  
+  .rail_color {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #0c0c0e;
+      animation: color-anim 20s linear infinite;
+  }
+  
+  .rail_heading {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .rail_gradients {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backface-visibility: hidden;
+      width: 100vw;
+      height: 100%;
+      transform: scale(1.75);
+  
+      @media screen and (min-width: 53em) {
+          transform: scale(1);
+      }
+  }
+  
+  .rail_gradient {
+      position: absolute;
+      width: 52vw;
+      height: 52vw;
+      min-width: 52vw;
+      min-height: 52vw;
+  }
+  
+  .rail_gradient.-core {
+      transform: translate(-20vw, calc(-2.3vw + 100vh));
+    opacity: 0.6;
+      animation: intro-core 3s cubic-bezier(.04,1.15,0.4,.99) 0.5s forwards;
+  }
+  
+  .rail_gradient.-pro {
+    transform: translate(20vw, calc(-2.3vw + 100vh) );
+    opacity: 0.6;
+      animation: intro-pro 2.75s cubic-bezier(.04,1.15,0.4,.99) 0.75s forwards;
+  }
+  
+  @keyframes clip-anim {
+      from {
+          transform: translateX(0%);
+     }
+      to {
+          transform: translateX(-50%);
+     }
+  }
+  
+  @keyframes color-anim {
+      from {
+          transform: translateX(0%);
+     }
+      to {
+          transform: translateX(50%);
+     }
+  }
+  
+  .video-mask {
+      -webkit-mask-image: url(#circleMask);
+      mask-image: url(#circleMask);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+  
+    .scale-transition {
+      transition: transform 0.35s cubic-bezier(0.3, 0.86, 0.36, 0.95);
+    }
