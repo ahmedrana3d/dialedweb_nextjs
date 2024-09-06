@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from 'next/navigation'; // Import useRouter from next/router
 import { Canvas } from "@react-three/fiber";
@@ -12,6 +12,7 @@ import { Sphere } from "./Sphere";
 import { title } from "process";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { LoadingScreen } from "../../LoadingScreen";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -116,10 +117,14 @@ export const Section8 = () => {
         </div>
 
         <div className="experience-one">
-          <Canvas camera={{ position: [0, 0, isMobile ? 5.5 : 7.5], fov: 35 }}>
-            <Sphere />
-            <Environment preset="night" />
-          </Canvas>
+          <Suspense fallback={<LoadingScreen />}>
+            <Canvas camera={{ position: [0, 0, isMobile ? 5.5 : 7.5], fov: 35 }}>
+              <Suspense  >
+                <Sphere />
+                <Environment preset="night" />
+              </Suspense>
+            </Canvas>
+          </Suspense>
         </div>
       </section>
     </>

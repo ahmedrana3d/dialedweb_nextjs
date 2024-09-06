@@ -1097,6 +1097,10 @@ a {
   color: #fefeff;
 }
 
+.one-opacity {
+  opacity: 0;
+}
+
 .one-description {
   font-family: "SFMEDIUM", sans-serif;
   font-weight: normal;

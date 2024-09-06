@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lottie from "lottie-react";
@@ -17,6 +17,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@nextui-org/react";
+import { LoadingScreen } from "../../../../LoadingScreen";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -53,7 +54,7 @@ const ChessboardGrid = () => {
 
   useEffect(() => {
     const split = new SplitText(textRef.current, { type: "words, chars" });
-
+  
     gsap.fromTo(
       split.chars,
       { opacity: 0.1 },
@@ -65,41 +66,44 @@ const ChessboardGrid = () => {
           trigger: textRef.current,
           start: "top 99%",
           end: "top 99%",
-          // markers: true,
           toggleActions: "play none reset none",
         },
       }
     );
-
-    gsap.fromTo(
-      numberRef.current,
-      { innerText: "0%" },
-      {
-        duration: 2,
-        innerText: "89%",
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: numberRef.current,
-          start: "top 90%",
-          end: "top 30%",
-          scrub: 1,
-          // markers: true,
-        },
-        snap: { innerText: 1 },
-        onUpdate: function () {
-          numberRef.current.innerText = `${Math.round(
-            parseFloat(this.targets()[0].innerText)
-          )}%`;
-        },
-      }
-    );
-
+  
+    if (numberRef.current) {
+      gsap.fromTo(
+        numberRef.current,
+        { innerText: "0%" },
+        {
+          duration: 2,
+          innerText: "89%",
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: numberRef.current,
+            start: "top 90%",
+            end: "top 30%",
+            scrub: 1,
+          },
+          snap: { innerText: 1 },
+          onUpdate: function () {
+            // Add a null check here
+            if (numberRef.current) {
+              numberRef.current.innerText = `${Math.round(
+                parseFloat(this.targets()[0].innerText)
+              )}%`;
+            }
+          },
+        }
+      );
+    }
+  
     ScrollTrigger.create({
       trigger: ".canvas-chess",
       start: "top 99%",
       end: "top 99%",
       onEnter: () => {
-        chessBoardRef.current.playAnimation();
+        chessBoardRef.current?.playAnimation();
       },
     });
   }, []);
@@ -190,6 +194,7 @@ const ChessboardGrid = () => {
           </Card>
         </div>
         <div className="bg-transparent col-span-1 md:col-span-2 row-span-1 md:row-span-3 flex justify-center items-center rounded-3xl relative canvas-chess">
+          <Suspense fallback={<LoadingScreen />}>
           <Canvas
             className="!w-full !h-[35vh] md:!h-[40vh] lg:!h-full z-10"
             camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 5, 11] }}
@@ -206,6 +211,7 @@ const ChessboardGrid = () => {
             <Environment preset="city" />
             <ambientLight intensity={Math.PI / 2} />
           </Canvas>
+          </Suspense>
 
           <div className="absolute left-0 top-0 w-full h-full grid gap-x-10 grid-cols-2  pointer-events-none">
             <div

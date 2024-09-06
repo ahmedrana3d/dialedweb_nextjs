@@ -11,6 +11,7 @@ import Marquee from "react-fast-marquee";
 import { Item3 } from "./Coins";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { LoadingScreen } from "../../LoadingScreen";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -24,9 +25,6 @@ export const Section1 = ({ section3Ref }) => {
   // GSAP ANIMATIONS
 
   useEffect(() => {
-
-    gsap.set(titleRef.current, { opacity: 0 })
-    gsap.set(".one-button, .one-button-transparent, .one-description", { opacity: 0 })
 
     const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
     gsap.fromTo(titleRef.current, { rotationX: 70, opacity: 0, transformOrigin: 'center bottom', transformPerspective: 500, },
@@ -87,11 +85,11 @@ export const Section1 = ({ section3Ref }) => {
         <div className="background-element-grid-small" />
         <div className="one-content">
           <div className="one-content-left">
-            <h1 className="headline anim" ref={titleRef} >Crafting Digital <br /> Masterpieces</h1>
-            <p className="one-description">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
+            <h1 className="headline anim one-opacity" ref={titleRef} >Crafting Digital <br /> Masterpieces</h1>
+            <p className="one-description one-opacity">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             <div className="one-content-buttons">
               <motion.button
-                className="one-button-transparent"
+                className="one-button-transparent one-opacity"
                 onClick={() => { handleScrollToSection3(); hoverSoundMobile(); }}
                 onMouseEnter={hoverSoundStart}
                 onMouseLeave={hoverSoundEnd}
@@ -105,7 +103,7 @@ export const Section1 = ({ section3Ref }) => {
                 </div>
               </motion.button>
               <motion.button
-                className="one-button"
+                className="one-button one-opacity"
                 onClick={() => { handleContactNavigate(); hoverSoundMobile(); }}
                 onMouseEnter={hoverSoundStart}
                 onMouseLeave={hoverSoundEnd}
@@ -122,15 +120,17 @@ export const Section1 = ({ section3Ref }) => {
           </div>
           <div className="one-content-right">
             <div className="one-content-right-experience" >
-              <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
-                <Suspense fallback={null}>
-                  <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-                    <Item3 />
-                  </Float>
-                </Suspense>
-                <Environment preset="sunset" />
-                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
-              </Canvas>
+              <Suspense fallback={<LoadingScreen />}>
+                <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
+                  <Suspense>
+                    <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
+                      <Item3 />
+                    </Float>
+                  </Suspense>
+                  <Environment preset="sunset" />
+                  <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
+                </Canvas>
+              </Suspense>
             </div>
           </div>
         </div>
