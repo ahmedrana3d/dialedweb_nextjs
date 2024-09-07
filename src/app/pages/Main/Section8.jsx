@@ -12,7 +12,7 @@ import { Sphere } from "./Sphere";
 import { title } from "process";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
-import { LoadingScreen } from "../../LoadingScreen";
+import Loading from "../../Loading";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -117,7 +117,7 @@ export const Section8 = () => {
         </div>
 
         <div className="experience-one">
-          <Suspense fallback={<LoadingScreen />}>
+          <Suspense fallback={<Loading />}>
             <Canvas camera={{ position: [0, 0, isMobile ? 5.5 : 7.5], fov: 35 }}>
               <Suspense  >
                 <Sphere />

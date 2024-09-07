@@ -2,10 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { Navigation } from "./Navigation";
-import { LoadingScreen } from "./LoadingScreen";
+import Loading from "./Loading";
 import { Suspense } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -15,9 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Navigation />
-        <Suspense fallback={<LoadingScreen />} >
+        <Suspense fallback={<Loading />} >
           {children}
         </Suspense>
       </body>

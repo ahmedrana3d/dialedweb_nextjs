@@ -1,6 +1,6 @@
 "use client";
 
-export const LoadingScreen = () => {
+export default function Loading() {
   
     return (
       <div className="website-loading-screen">

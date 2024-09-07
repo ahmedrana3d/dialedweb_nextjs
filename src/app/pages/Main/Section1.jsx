@@ -11,7 +11,7 @@ import Marquee from "react-fast-marquee";
 import { Item3 } from "./Coins";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
-import { LoadingScreen } from "../../LoadingScreen";
+import Loading from "../../Loading";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -120,7 +120,7 @@ export const Section1 = ({ section3Ref }) => {
           </div>
           <div className="one-content-right">
             <div className="one-content-right-experience" >
-              <Suspense fallback={<LoadingScreen />}>
+              <Suspense fallback={<Loading />}>
                 <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
                   <Suspense>
                     <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>

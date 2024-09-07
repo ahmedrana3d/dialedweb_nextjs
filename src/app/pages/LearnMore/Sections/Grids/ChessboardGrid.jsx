@@ -17,7 +17,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@nextui-org/react";
-import { LoadingScreen } from "../../../../LoadingScreen";
+import Loading from "../../../../Loading";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -194,7 +194,7 @@ const ChessboardGrid = () => {
           </Card>
         </div>
         <div className="bg-transparent col-span-1 md:col-span-2 row-span-1 md:row-span-3 flex justify-center items-center rounded-3xl relative canvas-chess">
-          <Suspense fallback={<LoadingScreen />}>
+          <Suspense fallback={<Loading />}>
           <Canvas
             className="!w-full !h-[35vh] md:!h-[40vh] lg:!h-full z-10"
             camera={{ fov: 45, near: 0.1, far: 1000, position: [0, 5, 11] }}
