@@ -64,8 +64,8 @@ const ProjectPage = () => {
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Architectural Visualization</p>
                     </div>
-                    <p className="project-text-description" >3D Renderings</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="description" >3D Renderings</p>
+                    <p className="description" >(2024)</p>
                   </div>
                 </div>
 
@@ -77,8 +77,8 @@ const ProjectPage = () => {
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Peak Creations</p>
                     </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="description" >UI/UX Design, Development</p>
+                    <p className="description" >(2024)</p>
                   </div>
                 </div>
 
@@ -90,8 +90,8 @@ const ProjectPage = () => {
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Vita Lenta</p>
                     </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="description" >UI/UX Design, Development</p>
+                    <p className="description" >(2024)</p>
                   </div>
                 </div>
 
@@ -103,8 +103,8 @@ const ProjectPage = () => {
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Dialedweb Jewelry</p>
                     </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="description" >UI/UX Design, Development</p>
+                    <p className="description" >(2024)</p>
                   </div>
                 </div>
     
@@ -116,8 +116,8 @@ const ProjectPage = () => {
                     <div className="project-text-container-title">
                       <p className="project-text-title" >DialedWeb Seltzer</p>
                     </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="description" >UI/UX Design, Development</p>
+                    <p className="description" >(2024)</p>
                   </div>
                 </div>
     
@@ -129,8 +129,8 @@ const ProjectPage = () => {
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Liran Stalik</p>
                     </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="description" >UI/UX Design, Development</p>
+                    <p className="description" >(2024)</p>
                   </div>
                 </div>
 
@@ -142,8 +142,8 @@ const ProjectPage = () => {
                     <div className="project-text-container-title">
                       <p className="project-text-title" >Ecomwave</p>
                     </div>
-                    <p className="project-text-description" >UI/UX Design, Development</p>
-                    <p className="project-text-description" >(2024)</p>
+                    <p className="description" >UI/UX Design, Development</p>
+                    <p className="description" >(2024)</p>
                   </div>
                 </div>
     

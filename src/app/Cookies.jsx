@@ -18,9 +18,9 @@ export const Cookies = () => {
 
   return (
     <>
-        <div className={`cookies-popup ${!showCookiesPopup ? 'fade-out' : ''}`}>
-        <h1 className="cookies-title" >We value your privacy</h1>
-        <p className="cookies-description" >This website uses cookies to help you have a superior browsing experience on the website. <span className="cookies-underlined" onClick={() => {  handleNavigateClick('/privacy-policy'); }} >Read more</span></p>
+      <div className={`cookies-popup ${!showCookiesPopup ? 'fade-out' : ''}`}>
+        <h1 className="small-subheadline" >We value your privacy</h1>
+        <p className="small-description grey" >This website uses cookies to help you have a superior browsing experience on the website. <span className="cookies-underlined" onClick={() => {  handleNavigateClick('/privacy-policy'); }} >Read more</span></p>
         <div className="cookies-row">
           <motion.button className="cookies-button" onClick={handleCookiesResponse} >
             <div className="navigation-left-content">

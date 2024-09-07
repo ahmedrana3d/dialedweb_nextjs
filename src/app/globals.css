@@ -53,7 +53,7 @@ button {
   background: inherit;
   color: currentcolor;
   font-size: inherit;
-  font-family: inherit;
+  font-family: "SFBOLD", sans-serif;
   cursor: pointer;
 }
 
@@ -107,22 +107,6 @@ a {
 .fade-out {
   opacity: 0;
   pointer-events: none;
-}
-
-.cookies-title {
-  font-size: 1.75vw;
-  font-family: "SFBOLD", sans-serif;
-  margin: 0;
-  line-height: 90%;
-  color: #fefeff;
-}
-
-.cookies-description {
-  font-family: "SFMEDIUM", sans-serif;
-  font-size: 1vw;
-  color: #fefeff75;
-  line-height: 100%;
-  margin: 0;
 }
 
 .cookies-underlined {
@@ -186,7 +170,7 @@ a {
 .floating-div h1 {
   font-size: 1vw;
   color: #010001;
-  font-family: "TanPearl", sans-serif;
+  font-family: "SFMEDIUM", sans-serif;
 }
 
 /* REAL ESTATE */
@@ -383,18 +367,9 @@ a {
 .contact-overlay-left {
   display: flex;
   flex-direction: column;
-  width: 37.5vw;
+  width: 40%;
   height: 100%;
   padding: 0vw 5vw;
-}
-
-.contact-overlay-title {
-  font-size: 4vw;
-  font-family: "SFBOLD", sans-serif;
-    
-  margin: 0;
-  line-height: 1;
-  color: #fefeff;
 }
 
 .contact-overlay-left-box {
@@ -412,7 +387,7 @@ a {
   border: 1px solid #fefeff50;
   border-radius: 10px;
   display: flex;
-  padding: 1.25vw;
+  padding: 1vw;
   gap: 1vw;
   align-items: center;
   transition: background-color 0.5s ease;
@@ -436,23 +411,10 @@ a {
   width: 19.5vw;
 }
 
-.contact-overlay-description {
-  font-size: 0.95vw;
-  font-family: "SFMEDIUM", sans-serif;
-    
-  margin: 0;
-  color: #fefeff75;
-  line-break: 125%;
-}
-
-.white-text {
-  color: #fefeff;
-}
-
 .contact-overlay-right {
   display: flex;
   flex-direction: column;
-  width: 55vw;
+  width: 60%;
   padding: 2vw;
   align-items: center;
   justify-content: center;
@@ -460,7 +422,7 @@ a {
 }
 
 .contact-video {
-  width: 80%;
+  width: 60%;
   transition: transform 0.3s ease-out; /* Adjust the duration and easing function as needed */
   transform-style: preserve-3d;
 }
@@ -471,10 +433,11 @@ a {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  gap: 1vw;
 }
 
-.contact-option-1 {
-  width: 31%;
+.contact-small-box {
+  width: 100%;
   height: fit-content;
   padding: 1vw;
   background-color: #fefeff20;
@@ -482,14 +445,14 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.25vw;
+  gap: 0.5vw;
   border-radius: 10px;
   text-decoration: none;
   color: #fefeff;
   transition: background-color 0.5s ease;
 }
 
-.contact-option-1:hover {
+.contact-small-box:hover {
   background-color: #fefeff30;
 }
 
@@ -498,16 +461,7 @@ a {
   color: #fefeff;
 }
 
-.option-text {
-  font-size: 0.85vw;
-  font-family: "SFMEDIUM", sans-serif;
-    
-  margin: 0;
-  color: #fefeff75;
-  line-break: 125%;
-}
-
-.contact-phone {
+.contact-box {
   width: 100%;
   height: fit-content;
   display: flex;
@@ -518,32 +472,7 @@ a {
   transition: background-color 0.5s ease;
 }
 
-.contact-phone:hover {
-  background-color: #fefeff30;
-}
-
-.phone-text {
-  font-size: 1vw;
-  font-family: "SFMEDIUM", sans-serif;
-    
-  margin: 0;
-  color: #fefeff;
-  line-break: 125%;
-}
-
-.contact-address {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  padding: 1vw;
-  flex-direction: column;
-  background-color: #fefeff20;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.5s ease;
-}
-
-.contact-address:hover {
+.contact-box:hover {
   background-color: #fefeff30;
 }
 
@@ -561,141 +490,51 @@ a {
   margin: 0;
   line-height: 90%;
   color: #fefeff;
-    
 }
 
-.headline-purple {
-  font-family: 'GT Alpina Trial', sans-serif;
-  color: #fefeff;
-    
-  font-size: 5vw;
+.subheadline {
+  font-size: 2.75vw;
+  font-family: "SFMEDIUM", sans-serif;
   margin: 0;
+  line-height: 105%;
+  color: #fefeff;
 }
 
-.headline-purple-big {
-  font-family: "SF", sans-serif;
-    
-  color: #fefeff;
-  font-size: 10vw;
+.small-subheadline {
+  font-size: 2vw;
+  font-family: "SFMEDIUM", sans-serif;
   margin: 0;
+  line-height: 105%;
+  color: #fefeff;
 }
 
 .description {
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 1.25vw;
   color: #fefeff;
-  line-height: 145%;
+  line-height: 115%;
+  margin: 0;
 }
 
-
-/* ROTATING TEXT */
-
-.rotatingHeader {
-	width: fit-content;
-	white-space: nowrap;
-  height: fit-content;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.rotatingHeader h1{
+.small-description {
   font-family: "SFMEDIUM", sans-serif;
-    
-	color: #fefeff;
-	font-size: 2.25vw;
-	margin:0;
-	padding: 0;
-	line-height: 0.5;
-	perspective: 600px;
-  z-index: 10;
-}
-
-.rotatingHeader h1:nth-child(2) {
-  font-family: "SFMEDIUM", sans-serif;
-    
-  font-style: italic;
-}
-
-/* ACCORDION */
-
-.accordion-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.accordion {
-  background-color: #fefefe10;
-  cursor: pointer;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-top: 0vw;
-  padding-bottom: 0vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  transition: background-color 0.6s ease;
-  border-radius: 50px;
-}
-
-.accordion-top {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.accordion-icon {
-  background-color: #fefeff;
-  width: 2vw;
-  height: 2vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #111111;
-}
-
-.accordion:hover {
-  background-color: #fefeff25;
-}
-
-.rotate {
-  transform: rotate(90deg);
-}
-
-.accordion-content {
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.title-accordion {
-  font-family: "SFMEDIUM", sans-serif;
-    
-  font-size: 2vw;
-  color: #fefeff;
-  margin: 2.5vh 0;
-}
-
-.small-text-accordion {
-  font-family: "SFMEDIUM", sans-serif;
-    
-  font-size: 1.25vw;
+  font-size: 0.9vw;
   color: #fefeff;
   line-height: 125%;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 2vw;
 }
 
-.rotate {
-  transform: rotate(180deg);
+/* COLORS */
+
+.black {
+  color: #010001;
+}
+
+.white {
+  color: #fefeff;
+}
+
+.grey {
+  color: #fefeff75;
 }
 
 /* NAVIGATION BAR */
@@ -846,13 +685,11 @@ a {
 .navigation-text {
   font-size: 0.8vw;
   font-family: "SFMEDIUM", sans-serif;
-    
 }
 
 .navigation-logo-text {
   font-size: 1.5vw;
   font-family: "SFMEDIUM", sans-serif;
-    
   color: #fefeff;
 }
 
@@ -1088,10 +925,9 @@ a {
 
 .one-description {
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 1.25vw;
   color: #fefeff75;
-  line-height: 145%;
+  line-height: 115%;
   width: 75%;
   margin: 0;
 }
@@ -1397,13 +1233,6 @@ a {
   pointer-events: all;
 }
 
-.two-images-box-content-item-text {
-  margin: 0;
-  font-family: "SFMEDIUM", sans-serif;
-    
-  font-size: 0.9vw;
-}
-
 /* SECTION THREE */
 
 .three {
@@ -1508,8 +1337,7 @@ a {
 }
 .typewriter {
   position: relative;
-  font-family: 'Inter', sans-serif;
-    
+  font-family: "SFMEDIUM", sans-serif;
   font-size: 1.25vw;
   line-height: 100%;
   overflow: hidden;
@@ -1524,9 +1352,8 @@ a {
 }
 
 .typewriter-text {
-  font-family: 'SF', sans-serif;
+  font-family: "SFMEDIUM", sans-serif;
   color:#fefeff75;
-    
   padding-left: 0.25vw;
 }
 
@@ -1640,19 +1467,9 @@ a {
   gap: 1vw;
 }
 
-.why-us-text-title {
-  font-size: 1.25vw;
-  font-family: "SFBOLD", sans-serif;
-  margin: 0;
-  line-height: 1;
-  color: #fefeff;
-  z-index: 4;
-}
-
 .why-us-text-description {
-  font-size: 1vw;
+  font-size: 0.9vw;
   font-family: "SFMEDIUM", sans-serif;
-    
   margin: 0;
   color: transparent;
   transition: 0.25s linear;
@@ -1661,7 +1478,7 @@ a {
 }
 
 .why-us-right-row:hover p {
-  font-size: 1vw;
+  font-size: 0.9vw;
   display: flex;
   color: #fefeff75;
 }
@@ -1715,14 +1532,6 @@ a {
 .five-content-item-inside {
   /* width: 20vw; */
   width: fit-content;
-}
-
-.five-content-item-text {
-  font-family: "SFMEDIUM", sans-serif;
-    
-  font-size: 1vw;
-  color: #fefeff;
-  line-height: 145%;
 }
 
 /* SECTION SIX */
@@ -1876,15 +1685,6 @@ a {
   flex-direction: column;
 }
 
-.front-bottom-text {
-  font-size: 1.25vw;
-  font-family: "SFMEDIUM", sans-serif;
-    
-  margin: 0;
-  line-height: 105%;
-  color: #fefeff;
-}
-
 .front-bottom-circle {
   width: 2vw;
   height: 2vw;
@@ -1927,38 +1727,7 @@ a {
   border: 2px solid #fefeff;
   color: #010001;
   border-radius: 50px;
-  transition: 0.5s ease;
 }
-
-.back-content-box:hover {
-  background-color: #010001;
-  border: 2px solid #fefeff;
-  color: #fefeff;
-}
-
-.six-back-description {
-  font-size: 1vw;
-  font-family: "SFMEDIUM", sans-serif;
-    
-  margin: 0;
-  line-height: 105%;
-}
-
-.six-title {
-  color: #010001;
-}
-
-.six-description {
-  font-size: 2.25vw;
-  font-family: "SFMEDIUM", sans-serif;
-    
-  margin: 0;
-  line-height: 105%;
-  color: #fefeff;
-}
-
-
-
 
 /* SECTION SEVEN */
 
@@ -2002,7 +1771,6 @@ a {
 
 .eight-bottom-description {
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 1vw;
   color: #fefeff50;
   line-height: 145%;
@@ -2166,7 +1934,7 @@ a {
 
 .policy {
   height: fit-content;
-  padding: 20vh 5vw;
+  padding: 10vh 5vw;
   display: flex;
   justify-content: center;
 }
@@ -2174,25 +1942,9 @@ a {
 .policy-content {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   align-items: start;
   gap: 2.5vw;
-}
-
-.policy-description {
-  font-family: "SFMEDIUM", sans-serif;
-    
-  font-size: 1vw;
-  color: #fefeff50;
-  line-height: 145%;
-}
-
-.policy-subtitle {
-  font-family: "SFMEDIUM", sans-serif;
-    
-  font-size: 1vw;
-  color: #fefeff;
-  line-height: 145%;
 }
 
 .policy-container {
@@ -2205,10 +1957,9 @@ a {
   list-style-type: disc;
   padding-left: 2vw;
   font-family: "SFMEDIUM", sans-serif;
-    
-  font-size: 1vw;
-  color: #fefeff50;
-  line-height: 145%;
+  font-size: 0.9vw;
+  color: #fefeff75;
+  line-height: 115%;
 }
 
 /* VIDEOONSCROLL */
@@ -2250,14 +2001,6 @@ a {
   justify-content: center;
   gap: 1vw;
   row-gap: 1vw;
-}
-
-.scroll-section-headline {
-  font-size: 5vw;
-  font-family: "SFBOLD", sans-serif;
-  margin: 0;
-  line-height: 1;
-  color: #fefeff;
 }
 
 .box-between-words-small {
@@ -2341,7 +2084,6 @@ a {
 
 .projects-section-title-description {
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 1.1vw;
   line-height: 0.75;
   margin: 0;
@@ -2401,12 +2143,11 @@ a {
   width: fit-content;
 }
 
-.project-text-title, .project-text-description {
-  font-size: 1.1vw;
+.project-text-title {
+  font-size: 1.25vw;
   font-family: "SFMEDIUM", sans-serif;
-    
   margin: 0;
-  line-height: 100%;
+  line-height: 115%;
   color: #fefeff;
   position: relative; /* Ensure relative positioning for pseudo-element positioning */
 }
@@ -2475,7 +2216,6 @@ a {
 .casestudy-button-text {
   font-size: 1.25vw;
   font-family: "SFMEDIUM", sans-serif;
-    
 }
 
 .casestudy-top-right {
@@ -2527,7 +2267,6 @@ a {
   margin: 0;
   line-height: 110%;
   color: #fefeff;
-    
 }
 
 .casestudy-half-images {
@@ -2652,7 +2391,6 @@ a {
 .introduction-bottom-left-text {
   margin: 0;
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 0.85vw;
   color: #fefeff;
   text-transform: uppercase;
@@ -2661,7 +2399,6 @@ a {
 .introduction-bottom-content-right-text {
   margin: 0;
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 2.8vw;
   color: #fefeff;
   text-transform: uppercase;
@@ -2712,7 +2449,6 @@ a {
 
 .introduction-text-box-right-text {
   font-size: 2vw;
-    
   color: #fefeff50;
   font-family: "SFMEDIUM", sans-serif;
   letter-spacing: 0.15vw;
@@ -2724,7 +2460,6 @@ a {
 
 .introduction-section-description {
   font-size: 1vw;
-    
   color: #fefeff;
   font-family: "SFBOLD", sans-serif;
   z-index: 2;
@@ -2735,7 +2470,6 @@ a {
 
 .introduction-section-description-top {
   font-size: 1vw;
-    
   color: #fefeff;
   font-family: "SFBOLD", sans-serif;
   z-index: 2;
@@ -2745,10 +2479,6 @@ a {
   top: 10vh;
   left: 5vw;
   text-align: center;
-}
-
-.introduction-section-title-400 {
-    
 }
 
 .introduction-image {
@@ -2802,7 +2532,6 @@ a {
 .lineMask-text {
   margin: 0;
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 2.8vw;
   color: #fefeff;
   text-transform: uppercase;
@@ -2828,7 +2557,6 @@ a {
 
 .introduction-images-sticky-text {
   font-size: 9vw;
-    
   color: #fefeff25;
   font-family: "SFBOLD", sans-serif;
   z-index: 2;
@@ -2869,7 +2597,6 @@ a {
 }
 .introduction-image-row-number {
   font-family: "Playfair Display", serif;
-    
   font-size: 8vw;
   color: #fefeff;
   text-align: left;
@@ -2879,7 +2606,6 @@ a {
 }
 .introduction-image-row-title {
   font-family: "SFMEDIUM", sans-serif;
-    
   font-size: 1.75vw;
   color: #fefeff;
   text-align: left;
@@ -3061,13 +2787,9 @@ a {
   width: 100vw;
   height: 100vh;
   z-index: 400;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #010001;
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
@@ -3077,45 +2799,6 @@ a {
 .website-loading-video {
   position: relative;
   width: 20%;
-}
-
-.website-loading-screen--hidden {
-  animation: fade-out 0.25s ease-in-out forwards 0.25s;
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.loading-screen__title {
-  font-family: 'Inter', sans-serif;
-    
-  font-size: 4vw;
-  text-transform: uppercase;
-  margin: 0;
-  color: #fefeff;
-}
-
-.progress__container {
-  width: 100%;
-  height: 0.15vw;
-  background-color: #070E2B;
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.progress__bar {
-  width: 0;
-  height: 100%;
-  background-color: #fefeff;
-  transition: width 0.5s ease-in-out;
 }
 
 /* SMOOTH SCROLLING */
@@ -3167,14 +2850,6 @@ html.lenis, html.lenis body {
 .fade-out {
   opacity: 0;
   pointer-events: none;
-}
-
-.cookies-title {
-  font-size: 1.25rem;
-}
-
-.cookies-description {
-  font-size: 0.75rem;
 }
 
 .cookies-underlined {
@@ -3253,72 +2928,14 @@ html.lenis, html.lenis body {
     z-index: 20;
     background-color: transparent;
   }
-
-  .cursor {
-    width: 0vw;
-    height: 0vw;
-    border-radius: 50%;
-  
-    position: fixed;
-    left: 0;
-    top: 0;
-    transform: translate(-50%, -50%);
-  
-    background: white;
-    mix-blend-mode: difference;
-    pointer-events: none;
-    z-index: 1000;
-    display: none;
-  }
-  
-  .cta {
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    display: none;
-  }
-
-  .btn {
-
-  svg {
-    width: 0%;
-    height: 0%;
-    pointer-events: none;
-  }
-}
-
-[data-hover] {
-  position: relative;
-
-  [data-hover-bounds] {
-    position: absolute;
-    left: 0;
-    top: 0;
-    inset: 0;
-
-    /*    outline: 1px solid red; */
-  }
-
-  &:hover {
-    [data-hover-bounds] {
-      transform: scale(0);
-    }
-  }
-}
-
-#ball {
-  display: none;
-}
-
-#cursor-text {
-  display: none;
-}
   /* TEXTS */
 
 .headline {
   font-size: 2.5rem;
+}
+
+.subheadline {
+  font-size: 6vw;
 }
 
 .headline-purple {
@@ -3493,7 +3110,6 @@ input {
 
 .one-description {
   font-size: 1rem;
-  line-height: 125%;
   width: 80%;
   color: #fefeff75;
 }
@@ -3593,10 +3209,6 @@ input {
   padding: 0vw 5vw;
 }
 
-.contact-overlay-title {
-  font-size: 3rem;
-}
-
 .contact-overlay-left-box {
   display: flex;
   flex-direction: column;
@@ -3634,14 +3246,6 @@ input {
   width: 70%;
 }
 
-.contact-overlay-description {
-  font-size: 1rem;
-}
-
-.white-text {
-  color: #fefeff;
-}
-
 .contact-overlay-right {
   display: flex;
   flex-direction: column;
@@ -3658,20 +3262,13 @@ input {
   justify-content: space-between;
 }
 
-.contact-option-1 {
-  width: 31%;
-  height: fit-content;
+.contact-small-box {
   padding: 4vw 0;
-  background-color: #fefeff20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 0.25vw;
   border-radius: 10px;
 }
 
-.contact-option-1:hover {
+.contact-small-box:hover {
   background-color: #fefeff20;
 }
 
@@ -3680,36 +3277,12 @@ input {
   color: #fefeff;
 }
 
-.option-text {
-  font-size: 0.75rem;
-}
-
-.contact-phone {
-  width: 100%;
-  height: fit-content;
-  display: flex;
+.contact-box {
   padding: 4vw;
-  flex-direction: column;
-  background-color: #fefeff20;
-  border-radius: 10px;
 }
 
-.contact-phone:hover {
+.contact-box:hover {
   background-color: #fefeff20;
-}
-
-.phone-text {
-  font-size: 1rem;
-}
-
-.contact-address {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  padding: 4vw;
-  flex-direction: column;
-  background-color: #fefeff20;
-  border-radius: 10px;
 }
 
 .contact-button {
@@ -3795,10 +3368,6 @@ input {
   border: 1px solid #fefeff50;
   backdrop-filter: blur(10px);
   color: #010001;
-}
-
-.two-images-box-content-item-text {
-  font-size: 0.75rem;
 }
 
 /* SECTION THREE */
@@ -4104,10 +3673,6 @@ input {
   gap: 1vw;
 }
 
-.why-us-text-title {
-  font-size: 1.25rem;
-}
-
 .why-us-text-description {
   font-size: 1rem;
 }
@@ -4169,10 +3734,6 @@ input {
 .five-content-item-inside {
   /* width: 20vw; */
   width: fit-content;
-}
-
-.five-content-item-text {
-  font-size: 1rem;
 }
 
 
@@ -4339,10 +3900,6 @@ input {
   flex-direction: row;
 }
 
-.front-bottom-text {
-  font-size: 1.25rem;
-}
-
 .front-bottom-circle {
   width: 2rem;
   height: 2rem;
@@ -4391,10 +3948,6 @@ input {
 
 .six-title {
   font-size: 2.5rem;
-}
-
-.six-description {
-  font-size: 6vw;
 }
 /* EIGHT */
 
@@ -4554,14 +4107,6 @@ input {
   gap: 5vw;
 }
 
-.policy-description {
-  font-size: 1rem;
-}
-
-.policy-subtitle {
-  font-size: 1rem;
-}
-
 .policy-container {
   gap: 2vw;
 }
@@ -4642,10 +4187,6 @@ input {
   gap: 2vw;
   row-gap: 1vw;
   height: fit-content;
-}
-
-.scroll-section-headline {
-  font-size: 2.25rem;
 }
 
 .box-between-words-small {

@@ -158,16 +158,16 @@ export const Section2 = () => {
                                 <img loading="lazy" className="two-images-box-big-image" src="/visualization.jpg" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                        <h1 className="two-images-box-content-item-text">Websites</h1>
+                                        <h1 className="small-description black">Websites</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Design</h1>
+                                        <h1 className="small-description black">Design</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Visualisation</h1>
+                                        <h1 className="small-description black">Visualisation</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Animation</h1>
+                                        <h1 className="small-description black">Animation</h1>
                                     </motion.div>
                                 </div>
                             </div>
@@ -182,16 +182,16 @@ export const Section2 = () => {
                                 <img loading="lazy" className="two-images-box-big-image" src="/peakcreations.jpeg" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                        <h1 className="two-images-box-content-item-text">Websites</h1>
+                                        <h1 className="small-description black">Websites</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Design</h1>
+                                        <h1 className="small-description black">Design</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Visualisation</h1>
+                                        <h1 className="small-description black">Visualisation</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Animation</h1>
+                                        <h1 className="small-description black">Animation</h1>
                                     </motion.div>
                                 </div>
                             </div>
@@ -208,16 +208,16 @@ export const Section2 = () => {
                                 <img loading="lazy" className="two-images-box-big-image" src="/project7.png" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                        <h1 className="two-images-box-content-item-text">Websites</h1>
+                                        <h1 className="small-description black">Websites</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Design</h1>
+                                        <h1 className="small-description black">Design</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Consultation</h1>
+                                        <h1 className="small-description black">Consultation</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Data</h1>
+                                        <h1 className="small-description black">Data</h1>
                                     </motion.div>
                                 </div>
                             </div>
@@ -232,16 +232,16 @@ export const Section2 = () => {
                                 <img loading="lazy" className="two-images-box-big-image" src="/vitalentaproject.jpg" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
-                                        <h1 className="two-images-box-content-item-text">Websites</h1>
+                                        <h1 className="small-description black">Websites</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Design</h1>
+                                        <h1 className="small-description black">Design</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Visualisation</h1>
+                                        <h1 className="small-description black">Visualisation</h1>
                                     </motion.div>
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item">
-                                        <h1 className="two-images-box-content-item-text">Animation</h1>
+                                        <h1 className="small-description black">Animation</h1>
                                     </motion.div>
                                 </div>
                             </div>

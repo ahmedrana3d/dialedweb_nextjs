@@ -32,16 +32,16 @@ export const SectionVideoMobile = () => {
                 <div className="scroll-video-on-scroll-items">
                     <div className="scroll-video-items-wrapper">
                       <div className="scroll-video-items-wrapper-inside">
-                        <h1 className="scroll-section-headline scroll-headline-1">Grow</h1>
-                        <h1 className="scroll-section-headline scroll-headline-2">your</h1>
-                        <h1 className="scroll-section-headline scroll-headline-3 scroll-purple">Digital</h1>
+                        <h1 className="headline scroll-headline-1">Grow</h1>
+                        <h1 className="headline scroll-headline-2">your</h1>
+                        <h1 className="headline scroll-headline-3 scroll-purple">Digital</h1>
                         <motion.div whileHover={{ scale: 2, rotate: 10 }} transition={{ type: "tween", stiffness: 400, damping: 10 }} className="box-between-words-small box-between-words-image-1" />
-                        <h1 className="scroll-section-headline scroll-headline-4">Presence,</h1>
-                        <h1 className="scroll-section-headline scroll-headline-5">let</h1>
-                        <h1 className="scroll-section-headline scroll-headline-6">your</h1>
-                        <h1 className="scroll-section-headline scroll-headline-7 scroll-purple">Vision</h1>
+                        <h1 className="headline scroll-headline-4">Presence,</h1>
+                        <h1 className="headline scroll-headline-5">let</h1>
+                        <h1 className="headline scroll-headline-6">your</h1>
+                        <h1 className="headline scroll-headline-7 scroll-purple">Vision</h1>
                         <motion.div whileHover={{ scale: 2, rotate: -10 }} transition={{ type: "tween", stiffness: 400, damping: 10 }} className="box-between-words-big box-between-words-image-3" />
-                        <h1 className="scroll-section-headline scroll-headline-8">Bloom</h1>
+                        <h1 className="headline scroll-headline-8">Bloom</h1>
                       </div>
                     </div>
                 </div>

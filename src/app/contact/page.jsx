@@ -13,14 +13,6 @@ const ContactPage = () => {
     window.open(linkUrl, '_blank');
   };
 
-  const handleEmailClick = () => {
-    window.location.href = 'mailto:support@dialedworldwide.com';
-  };
-
-  const handlePhoneClick = () => {
-    window.location.href = 'tel:+16193176418';
-  };
-
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event) => {
@@ -45,46 +37,46 @@ const ContactPage = () => {
         <ReactLenis root>
           <div className="contact-overlay" >
             <div className="contact-overlay-left">
-              <h1 className="contact-overlay-title" >Get in Touch</h1>
+              <h1 className="headline" >Get in Touch</h1>
               <div className="contact-overlay-left-box">
 
                 <div className="contact-person-box">
                   <div className="contact-person-image contact-image" />
                   <div className="contact-description-box">
-                    <p className="contact-overlay-description" >Let's bring your idea to life. <span className="white-text" >Get in touch with management directly.</span>  </p>
+                    <p className="description grey" >Let's bring your idea to life. <span className="white" > Get in touch with management directly.</span>  </p>
                   </div>
                 </div>
 
                 <div className="contact-options-box">
-                  <a className="contact-option-1" href="tel:+16193176418">
+                  <a className="contact-small-box" href="tel:+16193176418">
                     <FontAwesomeIcon icon={faPhone} className="option-icon"/>
-                    <p className="option-text" >Call</p>
+                    <p className="small-description grey" >Call</p>
                   </a>
-                  <a className="contact-option-1" href="mailto:support@dialedworldwide.com">
+                  <a className="contact-small-box" href="mailto:support@dialedworldwide.com">
                     <FontAwesomeIcon icon={faEnvelope} className="option-icon"/>
-                    <p className="option-text email" >Email</p>
+                    <p className="small-description grey" >Email</p>
                   </a>
-                  <div className="contact-option-1" onClick={() => handleClick('https://www.linkedin.com/company/dialed-web/')}>
+                  <div className="contact-small-box" onClick={() => handleClick('https://www.linkedin.com/company/dialed-web/')}>
                     <FontAwesomeIcon icon={faLinkedin} className="option-icon"/>
-                    <p className="option-text" >LinkedIn</p>
+                    <p className="small-description grey" >LinkedIn</p>
                   </div>
                 </div>
 
-                <a className="contact-phone" href="https://tidycal.com/dialedweb/discoverycall" target="_blank">
-                  <p className="option-text" >Videocall</p>
-                  <p className="phone-text" >Book a Call</p>
+                <a className="contact-box" href="https://tidycal.com/dialedweb/discoverycall" target="_blank">
+                  <p className="small-description grey" >Videocall</p>
+                  <p className="description white" >Book a Call</p>
                 </a>
 
-                <a className="contact-phone" href="mailto:admin@dialedweb.com">
-                  <p className="option-text" >Email</p>
-                  <p className="phone-text" >admin@dialedworldwide.com</p>
+                <a className="contact-box" href="mailto:admin@dialedweb.com">
+                  <p className="small-description grey" >Email</p>
+                  <p className="description white" >admin@dialedworldwide.com</p>
                 </a>
 
-                <div className="contact-address">
-                  <p className="option-text" >Address</p>
-                  <p className="phone-text" >545 La Jolla Village Drive</p>
-                  <p className="phone-text" >San Diego</p>
-                  <p className="phone-text" >CA 92122</p>
+                <div className="contact-box">
+                  <p className="small-description grey" >Address</p>
+                  <p className="description white" >545 La Jolla Village Drive</p>
+                  <p className="description white" >San Diego</p>
+                  <p className="description white" >CA 92122</p>
                 </div>
 
               </div>

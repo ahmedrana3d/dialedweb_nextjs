@@ -211,10 +211,10 @@ export const Section6 = () => {
                   <div className="six-inside">
                     <div className="front">
                       <div className="front-top">
-                        <h1 className="six-description">{item.title}</h1>
+                        <h1 className="subheadline">{item.title}</h1>
                       </div>
                       <div className="front-bottom">
-                        <h1 className="front-bottom-text">Info</h1>
+                        <h1 className="description">Info</h1>
                         <div className="front-bottom-circle">
                           <FontAwesomeIcon icon={faPlus} className="fa-plus" />
                         </div>
@@ -224,7 +224,7 @@ export const Section6 = () => {
                       <div className="back-content">
                         {item.services.map((service, i) => (
                           <div key={i} className="back-content-box">
-                            <h1 className="six-back-description">{service}</h1>
+                            <h1 className="small-description black">{service}</h1>
                           </div>
                         ))}
                       </div>

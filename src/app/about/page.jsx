@@ -86,13 +86,13 @@ const AboutPage = () => {
               <div 
                 className="five-content-item" 
                 key={index}
-                ref={el => itemRefs.current[index] = el} // Assign each element to itemRefs
+                ref={el => itemRefs.current[index] = el}
               >
                 <div className="five-content-item-inside">
-                  <h1 className="five-content-item-text">{member.name}</h1>
+                  <h1 className="description">{member.name}</h1>
                 </div>
                 <div className="five-content-item-inside">
-                  <h1 className="five-content-item-text">{member.title}</h1>
+                  <h1 className="description">{member.title}</h1>
                 </div>
               </div>
             ))}

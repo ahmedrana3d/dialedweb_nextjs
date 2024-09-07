@@ -5,14 +5,14 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 // Reusable component for policy section headings
 const PolicySection = ({ title, children }) => (
   <div className="policy-container">
-    <h1 className="policy-subtitle">{title}</h1>
+    <h1 className="description">{title}</h1>
     {children}
   </div>
 );
 
 // Reusable component for paragraphs
 const PolicyParagraph = ({ text }) => (
-  <p className="policy-description">{text}</p>
+  <p className="small-description grey">{text}</p>
 );
 
 // Reusable component for list items
