@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float, OrbitControls } from "@react-three/drei";
@@ -24,7 +24,7 @@ export const Section1 = ({ section3Ref }) => {
 
   // GSAP ANIMATIONS
 
-  useEffect(() => {
+  useLayoutEffect(() => {
 
     const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
     gsap.fromTo(titleRef.current, { rotationX: 70, opacity: 0, transformOrigin: 'center bottom', transformPerspective: 500, },
