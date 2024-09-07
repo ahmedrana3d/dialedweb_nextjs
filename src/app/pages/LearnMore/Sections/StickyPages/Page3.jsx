@@ -159,7 +159,7 @@ const Page3 = () => {
         >
           <div className="odo-meter flex justify-center items-center flex-col">
             <div className=" absolute w-[90%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 stand-out font-sf-bold leading-tight text-[#fefeff] text-center text-[7vw] md:text-[4vw]">
-              Approximately 252000 <p>new websites are created</p>
+              Approximately 252,000 <p>new websites are created</p>
               <span>every day</span>
             </div>
           </div>

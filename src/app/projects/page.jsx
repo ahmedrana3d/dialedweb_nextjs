@@ -2,6 +2,7 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { SectionFooter } from "../pages/Main/SectionFooter";
 
 const ProjectPage = () => {
 
@@ -149,6 +150,7 @@ const ProjectPage = () => {
             </div>
           </div>
         </section>
+        <SectionFooter />
       </ReactLenis>
         </>
       );

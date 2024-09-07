@@ -5,7 +5,8 @@ import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faYoutube, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const Navigation = () => {
 
@@ -185,7 +186,7 @@ export const Navigation = () => {
             </div>
             <div className="menuSocial" ref={menuSocialRef}>
               <FontAwesomeIcon icon={faInstagram} className="nav-brands" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/') }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} />
-              <FontAwesomeIcon icon={faYoutube} className="nav-brands" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/') }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} />
+              <FontAwesomeIcon icon={faXTwitter} className="nav-brands" onClick={() => { hoverSoundMobile(); handleClick('https://www.instagram.com/dialedweb/') }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} />
               <FontAwesomeIcon icon={faLinkedin} className="nav-brands" onClick={() => { hoverSoundMobile(); handleClick('https://www.linkedin.com/company/dialed-web/') }} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd} />
             </div>
           </div>
@@ -200,7 +201,7 @@ export const Navigation = () => {
           onMouseLeave={hoverSoundEnd}
         >
           {isMobile ? (
-            <i className="fa-solid fa-bars"></i>
+            <FontAwesomeIcon icon={faBars} className="fa-solid fa-bars"/>
           ) : (
             <>
               <div className="navigation-left-content">
@@ -223,9 +224,9 @@ export const Navigation = () => {
           onMouseEnter={hoverSoundStart}
           onMouseLeave={hoverSoundEnd}
         >
-          <Link href="/contact">
+          <Link href="/contact" className="navigation-right-mobile-icon-box" >
           {isMobile ? (
-            <i className="fa-solid fa-envelope"></i>
+            <FontAwesomeIcon icon={faEnvelope} className="fa-solid"/>
           ) : (
             <>
               <div className="navigation-right-content">

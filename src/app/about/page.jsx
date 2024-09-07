@@ -5,6 +5,7 @@ import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
+import { SectionFooter } from "../pages/Main/SectionFooter";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -98,6 +99,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      <SectionFooter />
     </ReactLenis>
   );
 };

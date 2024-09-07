@@ -169,7 +169,7 @@ const ThirdPage = () => {
           A negative experience on a website will deter 88% of online consumers
           from revisiting, and 79% of consumers who encounter performance issues
           are less likely to buy from that site again, highlighting the critical
-          importance of for maintaining customer loyalty and sales.
+          importance of maintaining customer loyalty and sales.
         </div>
       </div>
 

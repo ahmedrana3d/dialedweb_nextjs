@@ -9,17 +9,12 @@
 
 @font-face {
   font-family: 'SFBOLD';
-  src: url('/SFBOLD.otf') format('OpenType');
+  src: url('/SFPRODISPLAYBOLD.otf') format('OpenType');
 }
 
 @font-face {
   font-family: 'SFMEDIUM';
-  src: url('/SFMEDIUM.otf') format('OpenType');
-}
-
-@font-face {
-  font-family: 'SFITALIC';
-  src: url('/SFITALIC.OTF') format('OTF');
+  src: url('/SFPRODISPLAYMEDIUM.otf') format('OpenType');
 }
 
 * {
@@ -120,12 +115,10 @@ a {
   margin: 0;
   line-height: 90%;
   color: #fefeff;
-  font-weight: 700;
 }
 
 .cookies-description {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
   font-size: 1vw;
   color: #fefeff75;
   line-height: 100%;
@@ -161,7 +154,6 @@ a {
 .cookies-button h2 {
   font-size: 0.8vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -326,7 +318,7 @@ a {
   position: absolute;
   bottom: 0;
   padding: 30px 0;
-  font-weight: 600;
+    
   font-size: 40px;
   overflow: hidden;
 }
@@ -399,7 +391,7 @@ a {
 .contact-overlay-title {
   font-size: 4vw;
   font-family: "SFBOLD", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   line-height: 1;
   color: #fefeff;
@@ -423,6 +415,12 @@ a {
   padding: 1.25vw;
   gap: 1vw;
   align-items: center;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.contact-person-box:hover {
+  background-color: #fefeff20;
 }
 
 .contact-person-image {
@@ -441,7 +439,7 @@ a {
 .contact-overlay-description {
   font-size: 0.95vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   color: #fefeff75;
   line-break: 125%;
@@ -477,7 +475,8 @@ a {
 
 .contact-option-1 {
   width: 31%;
-  height: 4vw;
+  height: fit-content;
+  padding: 1vw;
   background-color: #fefeff20;
   display: flex;
   flex-direction: column;
@@ -487,6 +486,11 @@ a {
   border-radius: 10px;
   text-decoration: none;
   color: #fefeff;
+  transition: background-color 0.5s ease;
+}
+
+.contact-option-1:hover {
+  background-color: #fefeff30;
 }
 
 .option-icon {
@@ -497,7 +501,7 @@ a {
 .option-text {
   font-size: 0.85vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   color: #fefeff75;
   line-break: 125%;
@@ -505,18 +509,23 @@ a {
 
 .contact-phone {
   width: 100%;
-  height: 4vw;
+  height: fit-content;
   display: flex;
   padding: 1vw;
   flex-direction: column;
   background-color: #fefeff20;
   border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+
+.contact-phone:hover {
+  background-color: #fefeff30;
 }
 
 .phone-text {
   font-size: 1vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   color: #fefeff;
   line-break: 125%;
@@ -530,6 +539,12 @@ a {
   flex-direction: column;
   background-color: #fefeff20;
   border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.contact-address:hover {
+  background-color: #fefeff30;
 }
 
 .contact-button {
@@ -546,20 +561,20 @@ a {
   margin: 0;
   line-height: 90%;
   color: #fefeff;
-  font-weight: 700;
+    
 }
 
 .headline-purple {
   font-family: 'GT Alpina Trial', sans-serif;
   color: #fefeff;
-  font-weight: 400;
+    
   font-size: 5vw;
   margin: 0;
 }
 
 .headline-purple-big {
   font-family: "SF", sans-serif;
-  font-weight: bold;
+    
   color: #fefeff;
   font-size: 10vw;
   margin: 0;
@@ -567,7 +582,7 @@ a {
 
 .description {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1.25vw;
   color: #fefeff;
   line-height: 145%;
@@ -586,7 +601,7 @@ a {
 
 .rotatingHeader h1{
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
 	color: #fefeff;
 	font-size: 2.25vw;
 	margin:0;
@@ -598,7 +613,7 @@ a {
 
 .rotatingHeader h1:nth-child(2) {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-style: italic;
 }
 
@@ -662,7 +677,7 @@ a {
 
 .title-accordion {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 2vw;
   color: #fefeff;
   margin: 2.5vh 0;
@@ -670,7 +685,7 @@ a {
 
 .small-text-accordion {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1.25vw;
   color: #fefeff;
   line-height: 125%;
@@ -831,13 +846,13 @@ a {
 .navigation-text {
   font-size: 0.8vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: 400;
+    
 }
 
 .navigation-logo-text {
   font-size: 1.5vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   color: #fefeff;
 }
 
@@ -945,7 +960,7 @@ a {
 .menu-text {
   font-size: 2.5vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   text-decoration: none;
   color: #010001;
@@ -1073,7 +1088,7 @@ a {
 
 .one-description {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1.25vw;
   color: #fefeff75;
   line-height: 145%;
@@ -1385,7 +1400,7 @@ a {
 .two-images-box-content-item-text {
   margin: 0;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 0.9vw;
 }
 
@@ -1494,7 +1509,7 @@ a {
 .typewriter {
   position: relative;
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+    
   font-size: 1.25vw;
   line-height: 100%;
   overflow: hidden;
@@ -1511,7 +1526,7 @@ a {
 .typewriter-text {
   font-family: 'SF', sans-serif;
   color:#fefeff75;
-  font-weight: bold;
+    
   padding-left: 0.25vw;
 }
 
@@ -1637,7 +1652,7 @@ a {
 .why-us-text-description {
   font-size: 1vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   color: transparent;
   transition: 0.25s linear;
@@ -1704,7 +1719,7 @@ a {
 
 .five-content-item-text {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1vw;
   color: #fefeff;
   line-height: 145%;
@@ -1864,7 +1879,7 @@ a {
 .front-bottom-text {
   font-size: 1.25vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   line-height: 105%;
   color: #fefeff;
@@ -1924,7 +1939,7 @@ a {
 .six-back-description {
   font-size: 1vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   line-height: 105%;
 }
@@ -1936,7 +1951,7 @@ a {
 .six-description {
   font-size: 2.25vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   line-height: 105%;
   color: #fefeff;
@@ -1987,7 +2002,7 @@ a {
 
 .eight-bottom-description {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1vw;
   color: #fefeff50;
   line-height: 145%;
@@ -2070,7 +2085,7 @@ a {
   margin: 0;
   line-height: 90%;
   color: #fefeff;
-  font-weight: 700;
+    
 }
 
 .footer-small-title {
@@ -2079,7 +2094,7 @@ a {
   margin: 0;
   line-height: 90%;
   color: #fefeff;
-  font-weight: 700;
+    
 }
 
 .footer-description {
@@ -2166,7 +2181,7 @@ a {
 
 .policy-description {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1vw;
   color: #fefeff50;
   line-height: 145%;
@@ -2174,7 +2189,7 @@ a {
 
 .policy-subtitle {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1vw;
   color: #fefeff;
   line-height: 145%;
@@ -2190,7 +2205,7 @@ a {
   list-style-type: disc;
   padding-left: 2vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1vw;
   color: #fefeff50;
   line-height: 145%;
@@ -2318,7 +2333,7 @@ a {
 
 .projects-section-title-small {
   font-family: "SFBOLD", sans-serif;
-  font-weight: normal;
+    
   font-size: 2vw;
   line-height: 0.75;
   margin: 0;
@@ -2326,7 +2341,7 @@ a {
 
 .projects-section-title-description {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   font-size: 1.1vw;
   line-height: 0.75;
   margin: 0;
@@ -2389,7 +2404,7 @@ a {
 .project-text-title, .project-text-description {
   font-size: 1.1vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: normal;
+    
   margin: 0;
   line-height: 100%;
   color: #fefeff;
@@ -2454,13 +2469,13 @@ a {
   margin: 0;
   line-height: 90%;
   color: #fefeff;
-  font-weight: 700;
+    
 }
 
 .casestudy-button-text {
   font-size: 1.25vw;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: 600;
+    
 }
 
 .casestudy-top-right {
@@ -2512,7 +2527,7 @@ a {
   margin: 0;
   line-height: 110%;
   color: #fefeff;
-  font-weight: 500;
+    
 }
 
 .casestudy-half-images {
@@ -2637,7 +2652,7 @@ a {
 .introduction-bottom-left-text {
   margin: 0;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: 500;
+    
   font-size: 0.85vw;
   color: #fefeff;
   text-transform: uppercase;
@@ -2646,7 +2661,7 @@ a {
 .introduction-bottom-content-right-text {
   margin: 0;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: 500;
+    
   font-size: 2.8vw;
   color: #fefeff;
   text-transform: uppercase;
@@ -2683,7 +2698,7 @@ a {
 
 .introduction-section-title {
   font-size: 6vw;
-  font-weight: 600;
+    
   color: #fefeff;
   font-family: "SFBOLD", sans-serif;
   letter-spacing: 0.15vw;
@@ -2697,7 +2712,7 @@ a {
 
 .introduction-text-box-right-text {
   font-size: 2vw;
-  font-weight: 400;
+    
   color: #fefeff50;
   font-family: "SFMEDIUM", sans-serif;
   letter-spacing: 0.15vw;
@@ -2709,7 +2724,7 @@ a {
 
 .introduction-section-description {
   font-size: 1vw;
-  font-weight: 400;
+    
   color: #fefeff;
   font-family: "SFBOLD", sans-serif;
   z-index: 2;
@@ -2720,7 +2735,7 @@ a {
 
 .introduction-section-description-top {
   font-size: 1vw;
-  font-weight: 400;
+    
   color: #fefeff;
   font-family: "SFBOLD", sans-serif;
   z-index: 2;
@@ -2733,7 +2748,7 @@ a {
 }
 
 .introduction-section-title-400 {
-  font-weight: 400;
+    
 }
 
 .introduction-image {
@@ -2787,7 +2802,7 @@ a {
 .lineMask-text {
   margin: 0;
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: 500;
+    
   font-size: 2.8vw;
   color: #fefeff;
   text-transform: uppercase;
@@ -2813,7 +2828,7 @@ a {
 
 .introduction-images-sticky-text {
   font-size: 9vw;
-  font-weight: 500;
+    
   color: #fefeff25;
   font-family: "SFBOLD", sans-serif;
   z-index: 2;
@@ -2854,7 +2869,7 @@ a {
 }
 .introduction-image-row-number {
   font-family: "Playfair Display", serif;
-  font-weight: 400;
+    
   font-size: 8vw;
   color: #fefeff;
   text-align: left;
@@ -2864,7 +2879,7 @@ a {
 }
 .introduction-image-row-title {
   font-family: "SFMEDIUM", sans-serif;
-  font-weight: 500;
+    
   font-size: 1.75vw;
   color: #fefeff;
   text-align: left;
@@ -3080,7 +3095,7 @@ a {
 
 .loading-screen__title {
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
+    
   font-size: 4vw;
   text-transform: uppercase;
   margin: 0;
@@ -3332,6 +3347,9 @@ html.lenis, html.lenis body {
 .navigation-right {
   width: 2rem;
   height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navigation-image {
@@ -3545,6 +3563,12 @@ input {
   font-size: 0.75rem;
 }
 
+.navigation-right-mobile-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .fa-solid {
   font-size: 0.75rem;
   color: #040217;
@@ -3593,6 +3617,10 @@ input {
   align-items: center;
 }
 
+.contact-person-box:hover {
+  background-color: transparent;
+}
+
 .contact-person-image {
   width: 5rem;
   height: 5rem;
@@ -3632,7 +3660,8 @@ input {
 
 .contact-option-1 {
   width: 31%;
-  height: 4rem;
+  height: fit-content;
+  padding: 4vw 0;
   background-color: #fefeff20;
   display: flex;
   flex-direction: column;
@@ -3640,6 +3669,10 @@ input {
   justify-content: center;
   gap: 0.25vw;
   border-radius: 10px;
+}
+
+.contact-option-1:hover {
+  background-color: #fefeff20;
 }
 
 .option-icon {
@@ -3653,12 +3686,16 @@ input {
 
 .contact-phone {
   width: 100%;
-  height: 4rem;
+  height: fit-content;
   display: flex;
   padding: 4vw;
   flex-direction: column;
   background-color: #fefeff20;
   border-radius: 10px;
+}
+
+.contact-phone:hover {
+  background-color: #fefeff20;
 }
 
 .phone-text {
@@ -4757,7 +4794,7 @@ input {
 }
 
 .introduction-section-title-400 {
-  font-weight: 400;
+    
 }
 
 .introduction-image {
