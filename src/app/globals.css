@@ -1725,7 +1725,6 @@ a {
   /* gap: 0vw; */
   justify-content: space-between;
   cursor: pointer;
-  transition: 0.5s ease;
 }
 
 .five-content-item-inside {
@@ -4154,7 +4153,6 @@ input {
   /* gap: 0vw; */
   justify-content: space-between;
   cursor: pointer;
-  transition: 0.5s ease;
 }
 
 .five-content-item:hover {

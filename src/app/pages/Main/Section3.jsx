@@ -44,7 +44,7 @@ export const Section3 = () => {
         }
       });
     gsap.fromTo( typewriterRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2", scrollTrigger: { trigger: typewriterRef.current, start: "top bottom"}});
-  })
+  }, []);
 
   return (
     <>
