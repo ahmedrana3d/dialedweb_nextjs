@@ -9,12 +9,12 @@
 
 @font-face {
   font-family: 'SFBOLD';
-  src: url('/SFPRODISPLAYBOLD.otf') format('OpenType');
+  src: url('/SFPRODISPLAYBOLD.OTF') format('OpenType');
 }
 
 @font-face {
   font-family: 'SFMEDIUM';
-  src: url('/SFPRODISPLAYMEDIUM.otf') format('OpenType');
+  src: url('/SFPRODISPLAYMEDIUM.OTF') format('OpenType');
 }
 
 * {
