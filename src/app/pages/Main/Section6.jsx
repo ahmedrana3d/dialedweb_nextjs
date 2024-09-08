@@ -236,7 +236,7 @@ export const Section6 = () => {
           </div>
         </div>
         <div className="floating-div" ref={floatingDiv}>
-          <h1>CLICK</h1>
+          <h1>FLIP</h1>
         </div>
       </section>
     </>
