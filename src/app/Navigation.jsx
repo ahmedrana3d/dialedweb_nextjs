@@ -17,6 +17,7 @@ export const Navigation = () => {
   const menuSocialRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   const hoverSound = typeof Audio !== 'undefined' ? new Audio('/fx.mp3') : null;
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -127,6 +128,24 @@ export const Navigation = () => {
     window.open(linkUrl, '_blank');
   };
 
+  const scrollToSection6 = () => {
+      const section = document.querySelector('#section6');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+  };
+
+  const handleClickServices = (linkUrl) => {
+    if (router.pathname === '/') {
+      scrollToSection6();
+    } else {
+      router.push('/');
+      setTimeout(() => {
+        scrollToSection6();
+      }, 2000);
+    }
+  };
+
   return (
     <>
       <div className={`menu-container z-50 ${menu ? 'open' : ''}`} onClick={() => setMenu(!menu)}>
@@ -159,13 +178,11 @@ export const Navigation = () => {
                   </div>
                 </Link>
               </div>
-              <div className="menu-text">
-                <Link href="/services">
-                  <div className="menu-button" onClick={hoverSoundMobile} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd}>
-                    <span className="menu-text">Services</span>
-                    <span className="menu-text">Services</span>
-                  </div>
-                </Link>
+              <div className="menu-text" onClick={handleClickServices} >
+                <div className="menu-button" onClick={hoverSoundMobile} onMouseEnter={hoverSoundStart} onMouseLeave={hoverSoundEnd}>
+                  <span className="menu-text">Services</span>
+                  <span className="menu-text">Services</span>
+                </div>
               </div>
               <div className="menu-text">
                 <Link href="/learn-more">
