@@ -48,18 +48,18 @@ export const Section4 = () => {
 
     gsap.fromTo( titleRef1.current, { opacity: 0 }, {  opacity: 1, duration: 1.5, ease: "power1", scrollTrigger: { trigger: titleRef1.current, start: "top bottom"}});
     gsap.fromTo( boxRef1.current, { yPercent: 50, opacity: 0 }, { delay: 0, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef1.current, start: "top bottom"}});
-    gsap.fromTo( boxRef2.current, { yPercent: 50, opacity: 0 }, { delay: 0.25, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef2.current, start: "top bottom"}});
-    gsap.fromTo( boxRef3.current, { yPercent: 50, opacity: 0 }, { delay: 0.5, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef3.current, start: "top bottom"}});
+    gsap.fromTo( boxRef2.current, { yPercent: 50, opacity: 0 }, { delay: isMobile ? 0 : 0.25, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef2.current, start: "top bottom"}});
+    gsap.fromTo( boxRef3.current, { yPercent: 50, opacity: 0 }, { delay: isMobile ? 0 : 0.5, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef3.current, start: "top bottom"}});
 
     gsap.fromTo( titleRef2.current, { opacity: 0 }, {  opacity: 1, duration: 1.5, ease: "power1", scrollTrigger: { trigger: titleRef2.current, start: "top bottom"}});
     gsap.fromTo( boxRef4.current, { yPercent: 50, opacity: 0 }, { delay: 0, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef4.current, start: "top bottom"}});
-    gsap.fromTo( boxRef5.current, { yPercent: 50, opacity: 0 }, { delay: 0.25, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef5.current, start: "top bottom"}});
-    gsap.fromTo( boxRef6.current, { yPercent: 50, opacity: 0 }, { delay: 0.5, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef6.current, start: "top bottom"}});
+    gsap.fromTo( boxRef5.current, { yPercent: 50, opacity: 0 }, { delay: isMobile ? 0 : 0.25, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef5.current, start: "top bottom"}});
+    gsap.fromTo( boxRef6.current, { yPercent: 50, opacity: 0 }, { delay: isMobile ? 0 : 0.5, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef6.current, start: "top bottom"}});
 
     gsap.fromTo( titleRef3.current, { opacity: 0 }, {  opacity: 1, duration: 1.5, ease: "power1", scrollTrigger: { trigger: titleRef3.current, start: "top bottom"}});
     gsap.fromTo( boxRef7.current, { yPercent: 50, opacity: 0 }, { delay: 0, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef7.current, start: "top bottom"}});
-    gsap.fromTo( boxRef8.current, { yPercent: 50, opacity: 0 }, { delay: 0.25, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef8.current, start: "top bottom"}});
-    gsap.fromTo( boxRef9.current, { yPercent: 50, opacity: 0 }, { delay: 0.5, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef9.current, start: "top bottom"}});
+    gsap.fromTo( boxRef8.current, { yPercent: 50, opacity: 0 }, { delay: isMobile ? 0 : 0.25, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef8.current, start: "top bottom"}});
+    gsap.fromTo( boxRef9.current, { yPercent: 50, opacity: 0 }, { delay: isMobile ? 0 : 0.5, yPercent: 0, opacity: 1, duration: 1, ease: "power3", scrollTrigger: { trigger: boxRef9.current, start: "top bottom"}});
   
   }, []);
 

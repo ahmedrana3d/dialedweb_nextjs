@@ -2875,30 +2875,34 @@ html.lenis, html.lenis body {
     z-index: 20;
     background-color: transparent;
   }
-  /* TEXTS */
+/* TEXTS */
 
 .headline {
-  font-size: 2.5rem;
+  font-size: 10vw;
 }
 
 .subheadline {
   font-size: 6vw;
 }
 
-.headline-purple {
-  font-size: 2.75rem;
-}
-
-.headline-purple-big {
-  font-size: 5rem;
-}
-
-.headline-blue {
-  font-size: 5rem;
+.small-subheadline {
+  font-size: 4.5vw;
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 3.5vw;
+}
+
+.one-description {
+  font-size: 3.5vw;
+}
+
+.small-description {
+  font-size: 2.5vw;
+}
+
+.navigation-text {
+  font-size: 3vw;
 }
 
   /* NAVIGATION BAR */
@@ -3055,12 +3059,6 @@ input {
   align-items: center;
 }
 
-.one-description {
-  font-size: 1rem;
-  width: 80%;
-  color: #fefeff75;
-}
-
 .one-content-right {
   height: 60vw;
   width: 100%;
@@ -3122,10 +3120,6 @@ input {
   width: auto;
 }
 
-.navigation-text {
-  font-size: 0.75rem;
-}
-
 .navigation-right-mobile-icon-box {
   display: flex;
   align-items: center;
@@ -3141,17 +3135,18 @@ input {
 
 .contact-overlay {
   width: 100vw;
-  height: 225vw;
+  height: fit-content;
   z-index: 1;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
+  padding-bottom: 10vw;
 }
 
 .contact-overlay-left {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: fit-content;
   height: fit-content;
   padding: 0vw 5vw;
 }
@@ -3194,11 +3189,6 @@ input {
 }
 
 .contact-overlay-right {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vw;
-  padding: 2vw;
   display: none;
 }
 
@@ -3207,6 +3197,7 @@ input {
   height: fit-content;
   display: flex;
   justify-content: space-between;
+  gap: 4vw;
 }
 
 .contact-small-box {
@@ -3406,7 +3397,7 @@ input {
   z-index: 1;
 }
 .typewriter {
-  font-size: 1rem;
+  font-size: 3.5vw;
 }
 
 .typewriter-main {
@@ -3940,6 +3931,7 @@ input {
 }
 
 .fa-location-arrow {
+  font-size: 2.5vw;
   color: #fefefe;
 }
 
@@ -4060,7 +4052,7 @@ input {
 
 .policy-list {
   padding-left: 4vw;
-  font-size: 1rem;
+  font-size: 2.5vw;
 }
 
 /* SCOLLY VIDEO */
@@ -4166,6 +4158,7 @@ input {
 
 .projects-section-content {
   gap: 10vw;
+  overflow: hidden;
 }
 
 .projects-top-texts {

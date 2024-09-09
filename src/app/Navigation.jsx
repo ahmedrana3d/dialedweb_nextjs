@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import Link from "next/link";
@@ -15,6 +15,7 @@ export const Navigation = () => {
   const menuContentRef = useRef(null);
   const menuNavRef = useRef(null);
   const menuSocialRef = useRef(null);
+  const navigationBar = useRef()
   const [isMobile, setIsMobile] = useState(false);
   const hoverSound = typeof Audio !== 'undefined' ? new Audio('/fx.mp3') : null;
   const router = useRouter();
@@ -24,6 +25,10 @@ export const Navigation = () => {
       setIsMobile(window.innerWidth <= 768);
     }
   });
+
+  useLayoutEffect(() => {
+    gsap.fromTo(navigationBar.current, { yPercent: -200, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1, ease: "power3"});
+  }, [])
 
   useEffect(() => {
     const tl = gsap.timeline({ paused: true });
@@ -210,7 +215,7 @@ export const Navigation = () => {
         </div>
       </div>
 
-      <div className={`navigation ${navScrolled ? "scrolled" : ""}`}>
+      <div className={`navigation ${navScrolled ? "scrolled" : ""}`} ref={navigationBar} >
         <motion.button
           className="navigation-left"
           onClick={() => { setMenu(!menu); hoverSoundMobile(); }}

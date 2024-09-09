@@ -69,6 +69,7 @@ export const SectionFooter = () => {
                     <div className="footer-content-right-column">
                         <h2 className="description footer-animate-description">Company</h2>
                         <div className="footer-column-contents">
+                            <p className="description footer-description footer-animate-description" onClick={() => { handleNavigateClick('/'); }}>Home</p>
                             <p className="description footer-description footer-animate-description" onClick={() => { handleNavigateClick('/about'); }}>About</p>
                             <p className="description footer-description footer-animate-description" onClick={() => { handleNavigateClick('/projects'); }}>Projects</p>
                             <p className="description footer-description footer-animate-description" onClick={() => { handleNavigateClick('/learn-more'); }}>Learn More</p>
@@ -87,7 +88,7 @@ export const SectionFooter = () => {
             </div>
             <div className="footer-divider" ref={lineRef} />
             <div className="footer-content-bottom">
-                <p className="description grey" ref={copyrightRef}>2024 © All Rights Reserved</p>
+                <p className="small-description grey" ref={copyrightRef}>2024 © All Rights Reserved</p>
                 <div className="footer-socials">
                     <div className="footer-icon-box" onClick={() => { handleClick('https://www.instagram.com/dialedweb/') }} >
                         <FontAwesomeIcon icon={faInstagram} className="footer-icon" />
