@@ -1,10 +1,9 @@
 import { Center, Instance, Instances } from "@react-three/drei";
 import { GroupProps, useFrame } from "@react-three/fiber";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import * as THREE from "three";
 import { CustomMaterial } from "./material";
 import React from "react";
-import gsap from "gsap";
 
 const radius = 3;
 const count = 8;
@@ -12,18 +11,13 @@ const count = 8;
 function Item(props: GroupProps) {
   const ref = useRef<THREE.Group>(null);
 
-  useEffect(() => {
+  useFrame(() => {
     if (ref.current) {
-      gsap.to(ref.current.rotation, {
-        x: "+=6.28", // Rotate full circle (2*PI radians)
-        y: "+=6.28",
-        z: "+=6.28",
-        duration: 10, // Duration of one full rotation (in seconds)
-        repeat: -1, // Repeat indefinitely
-        ease: "linear",
-      });
+      ref.current.rotation.x += 0.01;
+      ref.current.rotation.y += 0.01;
+      ref.current.rotation.z += 0.01;
     }
-  }, []);
+  });
 
   return (
     <group {...props}>
@@ -37,16 +31,11 @@ function Item(props: GroupProps) {
 export const Item3 = () => {
   const groupRef = useRef<THREE.Group>(null!);
 
-  useEffect(() => {
+  useFrame(() => {
     if (groupRef.current) {
-      gsap.to(groupRef.current.rotation, {
-        z: "+=6.28", // Rotate full circle (2*PI radians)
-        duration: 7.5, // Duration of one full rotation (in seconds)
-        repeat: -1, // Repeat indefinitely
-        ease: "linear",
-      });
+      groupRef.current.rotation.z -= 0.01;
     }
-  }, []);
+  });
 
   return (
     <Center>
