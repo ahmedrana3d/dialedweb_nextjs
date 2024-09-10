@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
+import Image from 'next/image'
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -61,7 +62,7 @@ export const SectionFooter = () => {
         <section className="footer">
             <div className="footer-content">
                 <div className="footer-content-left">
-                    <img loading="lazy" ref={logoRef} className="footer-logo" src="/loading.png" alt="" />
+                    <Image width={500} height={500} priority={false} ref={logoRef} className="footer-logo" src="/loading.png" alt="" />
                     <h1 className="headline footer-main-title-text" ref={titleRef} >Dialedweb</h1>
                     <p className="description grey" ref={descriptionRef}>Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
                 </div>

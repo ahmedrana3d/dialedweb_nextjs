@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 // import { useAnimateText } from "../ScrollAnimations";
 import gsap from "gsap";
@@ -190,7 +190,9 @@ export const SectionScrollVideoOnScroll = () => {
                         <h1 className="headline scroll-headline-8" ref={titleRef8} >Bloom</h1>
                     </div>
                 </div>
-                <div id="scrolly-video" className="video-background"></div>
+                <Suspense>
+                    <div id="scrolly-video" className="video-background"></div>
+                </Suspense>
                 <div className="floating-div" ref={floatingDiv}>
                     <h1>SCROLL</h1>
                 </div>

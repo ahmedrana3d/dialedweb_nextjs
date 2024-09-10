@@ -10,6 +10,7 @@ const LearnPage = () => {
     return (
       <>
       <ReactLenis root >
+        <Learnmorepage />
         <SectionFooter />
       </ReactLenis>
       </>

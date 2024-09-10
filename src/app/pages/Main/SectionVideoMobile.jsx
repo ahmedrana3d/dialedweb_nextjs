@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 // import { useAnimateText } from "../ScrollAnimations";
 
@@ -45,7 +45,9 @@ export const SectionVideoMobile = () => {
                       </div>
                     </div>
                 </div>
-                <div id="scrolly-video" className="video-background"></div>
+                <Suspense>
+                    <div id="scrolly-video" className="video-background"></div>
+                </Suspense>
             </section>
         </>
     )

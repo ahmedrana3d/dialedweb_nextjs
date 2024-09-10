@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
+import Image from 'next/image'
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -155,7 +156,7 @@ export const Section2 = () => {
                                 onMouseEnter={hoverSoundStart}
                                 onMouseLeave={hoverSoundEnd}
                             >
-                                <img loading="lazy" className="two-images-box-big-image" src="/visualization.jpg" alt="" />
+                                <Image width={500} height={500} priority={false} className="two-images-box-big-image" src="/visualization.jpg" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                         <h1 className="small-description black">Websites</h1>
@@ -179,7 +180,7 @@ export const Section2 = () => {
                                 onMouseEnter={hoverSoundStart}
                                 onMouseLeave={hoverSoundEnd}
                             >
-                                <img loading="lazy" className="two-images-box-big-image" src="/peakcreations.jpeg" alt="" />
+                                <Image width={500} height={500} priority={false} className="two-images-box-big-image" src="/peakcreations.jpeg" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                         <h1 className="small-description black">Websites</h1>
@@ -205,7 +206,7 @@ export const Section2 = () => {
                                 onMouseEnter={hoverSoundStart}
                                 onMouseLeave={hoverSoundEnd}
                             >
-                                <img loading="lazy" className="two-images-box-big-image" src="/project7.png" alt="" />
+                                <Image width={500} height={500} priority={false} loading="lazy" className="two-images-box-big-image" src="/project7.png" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                         <h1 className="small-description black">Websites</h1>
@@ -229,7 +230,7 @@ export const Section2 = () => {
                                 onMouseEnter={hoverSoundStart}
                                 onMouseLeave={hoverSoundEnd}
                             >
-                                <img loading="lazy" className="two-images-box-big-image" src="/vitalentaproject.jpg" alt="" />
+                                <Image width={500} height={500} priority={false} loading="lazy" className="two-images-box-big-image" src="/vitalentaproject.jpg" alt="" />
                                 <div className="two-images-box-content">
                                     <motion.div whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="two-images-box-content-item-first">
                                         <h1 className="small-description black">Websites</h1>

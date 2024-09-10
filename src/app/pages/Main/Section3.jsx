@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
@@ -52,7 +52,9 @@ export const Section3 = () => {
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container">
-              <video loading="lazy" className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop></video>
+              <Suspense>
+                <video loading="lazy" className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop></video>
+              </Suspense>
             </div>
           </div>
         )}
@@ -69,7 +71,9 @@ export const Section3 = () => {
           {isMobile && (
             <div className="three-content-box-right">
               <div className="container">
-                <video loading="lazy" className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop></video>
+                <Suspense>
+                  <video loading="lazy" className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop></video>
+                </Suspense>
               </div>
             </div>
           )}
