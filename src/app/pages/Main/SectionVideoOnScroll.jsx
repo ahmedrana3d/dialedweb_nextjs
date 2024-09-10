@@ -30,7 +30,7 @@ export const SectionScrollVideoOnScroll = () => {
         script.onload = () => {
             new ScrollyVideo({
                 scrollyVideoContainer: "scrolly-video",
-                src: "/flowerkey3.mp4",
+                src: isMobile ? "/flowermobile.mp4" : "/flowerkey3.mp4",
                 transitionSpeed: 14,
                 frameThreshold: 0.01,
                 full: true,
