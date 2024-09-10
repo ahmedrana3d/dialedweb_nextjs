@@ -12,6 +12,7 @@ import { Item3 } from "./Coins";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import Loading from "../../Loading";
+import Image from 'next/image'
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -120,27 +121,29 @@ export const Section1 = ({ section3Ref }) => {
           </div>
           <div className="one-content-right">
             <div className="one-content-right-experience" >
-                <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
-                  <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-                    <Item3 />
-                  </Float>
-                  <Environment preset="sunset" />
-                  <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
-                </Canvas>
+              <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
+                <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
+                <Suspense >
+                  <Item3 />
+                  </Suspense>
+                </Float>
+                <Environment preset="sunset" />
+                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
+              </Canvas>
             </div>
           </div>
         </div>
         <div className="one-content-logos">
           <Marquee speed={50}>
             <div className="marquee-row">
-              <img className="marquee-image" src="/webflow.png" alt="" />
-              <img className="marquee-image" src="/spline.png" alt="" />
-              <img className="marquee-image" src="/threejs.png" alt="" />
-              <img className="marquee-image" src="/shopify.png" alt="" />
-              <img className="marquee-image" src="/react.png" alt="" />
-              <img className="marquee-image" src="/hostinger.png" alt="" />
-              <img className="marquee-image" src="/figma.png" alt="" />
-              <img className="marquee-image" src="/gsap.png" alt="" />
+              <Image className="marquee-image" src="/webflow.png" alt="" width={500} height={500} />
+              <Image className="marquee-image" src="/spline.png" alt="" width={500} height={500} />
+              <Image className="marquee-image" src="/threejs.png" alt="" width={500} height={500} />
+              <Image className="marquee-image" src="/shopify.png" alt="" width={500} height={500} />
+              <Image className="marquee-image" src="/react.png" alt="" width={500} height={500} />
+              <Image className="marquee-image" src="/hostinger.png" alt="" width={500} height={500} />
+              <Image className="marquee-image" src="/figma.png" alt="" width={500} height={500} />
+              <Image className="marquee-image" src="/gsap.png" alt="" width={500} height={500} />
             </div>
           </Marquee>
         </div>
