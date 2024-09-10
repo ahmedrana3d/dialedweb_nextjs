@@ -24,59 +24,59 @@ export const Section1 = ({ section3Ref }) => {
 
   // GSAP ANIMATIONS
 
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
 
-    const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
-    gsap.fromTo(titleRef.current, { rotationX: 70, opacity: 0, transformOrigin: 'center bottom', transformPerspective: 500, },
-      { rotationX: 0, opacity: 1, duration: 1.25, ease: 'back.out', delay: 0.75 }
-    );
-    gsap.from(titleSplitText.chars, { yPercent: 50, stagger: 0.03, opacity: 0, ease: 'power1.out', duration: 0.5, delay: 0.75 });
+  //   const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
+  //   gsap.fromTo(titleRef.current, { rotationX: 70, opacity: 0, transformOrigin: 'center bottom', transformPerspective: 500, },
+  //     { rotationX: 0, opacity: 1, duration: 1.25, ease: 'back.out', delay: 0.75 }
+  //   );
+  //   gsap.from(titleSplitText.chars, { yPercent: 50, stagger: 0.03, opacity: 0, ease: 'power1.out', duration: 0.5, delay: 0.75 });
 
 
-    gsap.fromTo(
-      ".one-button, .one-button-transparent, .one-description",
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5, ease: "power1", delay: 2 }
-    );
-  }, []);
+  //   gsap.fromTo(
+  //     ".one-button, .one-button-transparent, .one-description",
+  //     { opacity: 0 },
+  //     { opacity: 1, duration: 1.5, ease: "power1", delay: 2 }
+  //   );
+  // }, []);
 
   // SCROLLING TO SECTION
 
-  const handleScrollToSection3 = () => {
-    section3Ref.current.scrollIntoView({ behavior: "smooth" });
-  };
+  // const handleScrollToSection3 = () => {
+  //   section3Ref.current.scrollIntoView({ behavior: "smooth" });
+  // };
 
   // NAVIGATE
 
-  const handleContactNavigate = () => {
-    if (router.pathname === "/contact") {
-      router.push("/");
-    } else {
-      router.push("/contact");
-    }
-  };
+  // const handleContactNavigate = () => {
+  //   if (router.pathname === "/contact") {
+  //     router.push("/");
+  //   } else {
+  //     router.push("/contact");
+  //   }
+  // };
 
   // SOUND
 
-  const hoverSoundStart = () => {
-    if (!isMobile && hoverSound) {
-      hoverSound.play();
-      hoverSound.currentTime = 0;
-    }
-  };
+  // const hoverSoundStart = () => {
+  //   if (!isMobile && hoverSound) {
+  //     hoverSound.play();
+  //     hoverSound.currentTime = 0;
+  //   }
+  // };
 
-  const hoverSoundEnd = () => {
-    if (!isMobile && hoverSound) {
-      hoverSound.pause();
-      hoverSound.currentTime = 0;
-    }
-  };
+  // const hoverSoundEnd = () => {
+  //   if (!isMobile && hoverSound) {
+  //     hoverSound.pause();
+  //     hoverSound.currentTime = 0;
+  //   }
+  // };
 
-  const hoverSoundMobile = () => {
-    if (isMobile && hoverSound) {
-      hoverSound.play();
-    }
-  };
+  // const hoverSoundMobile = () => {
+  //   if (isMobile && hoverSound) {
+  //     hoverSound.play();
+  //   }
+  // };
 
   return (
     <>
@@ -84,7 +84,7 @@ export const Section1 = ({ section3Ref }) => {
         <div className="background-element-small" />
         <div className="background-element-grid-small" />
         <div className="one-content">
-          <div className="one-content-left">
+          {/* <div className="one-content-left">
             <h1 className="headline anim one-opacity" ref={titleRef} >Crafting Digital <br /> Masterpieces</h1>
             <p className="one-description one-opacity">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             <div className="one-content-buttons">
@@ -117,9 +117,9 @@ export const Section1 = ({ section3Ref }) => {
                 </div>
               </motion.button>
             </div>
-          </div>
+          </div> */}
           <div className="one-content-right">
-            {/* <div className="one-content-right-experience" >
+            <div className="one-content-right-experience" >
               <Suspense fallback={<Loading />}>
                 <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
                   <Suspense>
@@ -131,7 +131,7 @@ export const Section1 = ({ section3Ref }) => {
                   <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
                 </Canvas>
               </Suspense>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="one-content-logos">
