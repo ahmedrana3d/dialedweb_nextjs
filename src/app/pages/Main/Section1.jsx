@@ -42,41 +42,41 @@ export const Section1 = ({ section3Ref }) => {
 
   // SCROLLING TO SECTION
 
-  // const handleScrollToSection3 = () => {
-  //   section3Ref.current.scrollIntoView({ behavior: "smooth" });
-  // };
+  const handleScrollToSection3 = () => {
+    section3Ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   // NAVIGATE
 
-  // const handleContactNavigate = () => {
-  //   if (router.pathname === "/contact") {
-  //     router.push("/");
-  //   } else {
-  //     router.push("/contact");
-  //   }
-  // };
+  const handleContactNavigate = () => {
+    if (router.pathname === "/contact") {
+      router.push("/");
+    } else {
+      router.push("/contact");
+    }
+  };
 
   // SOUND
 
-  // const hoverSoundStart = () => {
-  //   if (!isMobile && hoverSound) {
-  //     hoverSound.play();
-  //     hoverSound.currentTime = 0;
-  //   }
-  // };
+  const hoverSoundStart = () => {
+    if (!isMobile && hoverSound) {
+      hoverSound.play();
+      hoverSound.currentTime = 0;
+    }
+  };
 
-  // const hoverSoundEnd = () => {
-  //   if (!isMobile && hoverSound) {
-  //     hoverSound.pause();
-  //     hoverSound.currentTime = 0;
-  //   }
-  // };
+  const hoverSoundEnd = () => {
+    if (!isMobile && hoverSound) {
+      hoverSound.pause();
+      hoverSound.currentTime = 0;
+    }
+  };
 
-  // const hoverSoundMobile = () => {
-  //   if (isMobile && hoverSound) {
-  //     hoverSound.play();
-  //   }
-  // };
+  const hoverSoundMobile = () => {
+    if (isMobile && hoverSound) {
+      hoverSound.play();
+    }
+  };
 
   return (
     <>
@@ -84,7 +84,7 @@ export const Section1 = ({ section3Ref }) => {
         <div className="background-element-small" />
         <div className="background-element-grid-small" />
         <div className="one-content">
-          {/* <div className="one-content-left">
+          <div className="one-content-left">
             <h1 className="headline anim one-opacity" ref={titleRef} >Crafting Digital <br /> Masterpieces</h1>
             <p className="one-description one-opacity">Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
             <div className="one-content-buttons">
@@ -117,8 +117,8 @@ export const Section1 = ({ section3Ref }) => {
                 </div>
               </motion.button>
             </div>
-          </div> */}
-          <div className="one-content-right">
+          </div>
+          {/* <div className="one-content-right">
             <div className="one-content-right-experience" >
               <Suspense fallback={<Loading />}>
                 <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
@@ -132,7 +132,7 @@ export const Section1 = ({ section3Ref }) => {
                 </Canvas>
               </Suspense>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="one-content-logos">
           <Marquee speed={50}>
