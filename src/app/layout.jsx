@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navigation />
+        {/* <Navigation /> */}
         {/* <Cookies /> */}
         <Suspense fallback={<Loading />} >
           {children}
