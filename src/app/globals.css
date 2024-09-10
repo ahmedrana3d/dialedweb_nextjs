@@ -2003,6 +2003,14 @@ a {
   row-gap: 1vw;
 }
 
+.scroll-video-items-wrapper-inside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vw;
+  row-gap: 1vw;
+}
+
 .box-between-words-small {
   height: 5vw;
   width: 4vw;
