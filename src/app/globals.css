@@ -2559,13 +2559,6 @@ a {
   line-height: 50%;
   z-index: 2;
 }
-.introduction-image-row-title {
-  font-family: "SFMEDIUM", sans-serif;
-  font-size: 1.75vw;
-  color: #fefeff;
-  text-align: left;
-  margin: 0;
-}
 .introduction-images-container-row-right {
   width: 100%;
   height: fit-content;
@@ -2906,7 +2899,7 @@ html.lenis, html.lenis body {
 }
 
 .small-description {
-  font-size: 2.5vw;
+  font-size: 2.75vw;
 }
 
 .navigation-text {
@@ -4060,7 +4053,7 @@ input {
 
 .policy-list {
   padding-left: 4vw;
-  font-size: 2.5vw;
+  font-size: 2.75vw;
 }
 
 /* SCOLLY VIDEO */
@@ -4192,10 +4185,6 @@ input {
 
 .project-text-container {
   gap: 0.5vw;
-}
-
-.project-text-title, .project-text-description {
-  font-size: 1rem;
 }
 
 /* INTRODCUTION SECTION */
@@ -4380,12 +4369,6 @@ input {
 .introduction-images-row-img {
   height: 100vw;
   width: auto;
-}
-.introduction-image-row-number {
-  font-size: 8rem;
-}
-.introduction-image-row-title {
-  font-size: 1.5rem;
 }
 .introduction-images-container-row-right {
   width: 100%;

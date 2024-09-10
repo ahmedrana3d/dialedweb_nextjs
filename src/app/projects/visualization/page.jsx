@@ -119,7 +119,7 @@ const VisualizationPage = () => {
             <div className="introduction-images-row-left" onClick={() => { handleVisualizationNavigate('the-manor'); }} >
               <h1 className="introduction-image-row-number" >01</h1>
               <img src="/v1.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >The Manor</h1>
+              <h1 className="subheadline" >The Manor</h1>
             </div>
           </div>
 
@@ -127,7 +127,7 @@ const VisualizationPage = () => {
             <div className="introduction-images-row-right" onClick={() => { handleVisualizationNavigate('modern-beverly-hills-mansion'); }} >
               <h1 className="introduction-image-row-number" >02</h1>
               <img src="/v2.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Modern Beverly Hills Mansion</h1>
+              <h1 className="subheadline" >Modern Beverly Hills Mansion</h1>
             </div>
           </div>
 
@@ -135,7 +135,7 @@ const VisualizationPage = () => {
             <div className="introduction-images-row-left" onClick={() => { handleVisualizationNavigate('tropical-vacation-home'); }} >
               <h1 className="introduction-image-row-number" >03</h1>
               <img src="/tr1.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Tropical Vacation Home</h1>
+              <h1 className="subheadline" >Tropical Vacation Home</h1>
             </div>
           </div>
 
@@ -143,7 +143,7 @@ const VisualizationPage = () => {
             <div className="introduction-images-row-right" onClick={() => { handleVisualizationNavigate('minimalistic-studio'); }} >
               <h1 className="introduction-image-row-number" >04</h1>
               <img src="/st1.jpg"  className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Minimalisitic Studio </h1>
+              <h1 className="subheadline" >Minimalisitic Studio </h1>
             </div>
           </div>
 
@@ -151,7 +151,7 @@ const VisualizationPage = () => {
             <div className="introduction-images-row-left" onClick={() => { handleVisualizationNavigate('urban-sanctuary-hotel'); }} >
               <h1 className="introduction-image-row-number" >05</h1>
               <img src="/ur1.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Urban Sanctuary Hotel</h1>
+              <h1 className="subheadline" >Urban Sanctuary Hotel</h1>
             </div>
           </div>
 
@@ -159,7 +159,7 @@ const VisualizationPage = () => {
             <div className="introduction-images-row-right" onClick={() => { handleVisualizationNavigate('contemporary-home'); }} >
               <h1 className="introduction-image-row-number" >06</h1>
               <img src="/co1.jpg" className="introduction-images-row-img" alt="" />
-              <h1 className="introduction-image-row-title" >Contemporary Home</h1>
+              <h1 className="subheadline" >Contemporary Home</h1>
             </div>
           </div>
 

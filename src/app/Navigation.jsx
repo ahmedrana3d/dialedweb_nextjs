@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +20,7 @@ export const Navigation = () => {
   const [isMobile, setIsMobile] = useState(false);
   const hoverSound = typeof Audio !== 'undefined' ? new Audio('/fx.mp3') : null;
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -134,14 +136,21 @@ export const Navigation = () => {
   };
 
   const scrollToSection6 = () => {
-      const section = document.querySelector('#section6');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
+    const section = document.querySelector('#section6');
+    if (section) {
+      const offset = -10 * window.innerHeight / 100; // -10vh for all sections
+      const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition + offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
-  const handleClickServices = (linkUrl) => {
-    if (router.pathname === '/') {
+  const handleClickServices = () => {
+    if (pathname === '/') {
       scrollToSection6();
     } else {
       router.push('/');
