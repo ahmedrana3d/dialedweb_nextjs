@@ -24,21 +24,21 @@ export const Section1 = ({ section3Ref }) => {
 
   // GSAP ANIMATIONS
 
-  // useLayoutEffect(() => {
+  useLayoutEffect(() => {
 
-  //   const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
-  //   gsap.fromTo(titleRef.current, { rotationX: 70, opacity: 0, transformOrigin: 'center bottom', transformPerspective: 500, },
-  //     { rotationX: 0, opacity: 1, duration: 1.25, ease: 'back.out', delay: 0.75 }
-  //   );
-  //   gsap.from(titleSplitText.chars, { yPercent: 50, stagger: 0.03, opacity: 0, ease: 'power1.out', duration: 0.5, delay: 0.75 });
+    const titleSplitText = new SplitText(titleRef.current, { type: 'chars' });
+    gsap.fromTo(titleRef.current, { rotationX: 70, opacity: 0, transformOrigin: 'center bottom', transformPerspective: 500, },
+      { rotationX: 0, opacity: 1, duration: 1.25, ease: 'back.out', delay: 0.75 }
+    );
+    gsap.from(titleSplitText.chars, { yPercent: 50, stagger: 0.03, opacity: 0, ease: 'power1.out', duration: 0.5, delay: 0.75 });
 
 
-  //   gsap.fromTo(
-  //     ".one-button, .one-button-transparent, .one-description",
-  //     { opacity: 0 },
-  //     { opacity: 1, duration: 1.5, ease: "power1", delay: 2 }
-  //   );
-  // }, []);
+    gsap.fromTo(
+      ".one-button, .one-button-transparent, .one-description",
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, ease: "power1", delay: 2 }
+    );
+  }, []);
 
   // SCROLLING TO SECTION
 
@@ -118,21 +118,19 @@ export const Section1 = ({ section3Ref }) => {
               </motion.button>
             </div>
           </div>
-          {/* <div className="one-content-right">
+          <div className="one-content-right">
             <div className="one-content-right-experience" >
               <Suspense fallback={<Loading />}>
                 <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
-                  <Suspense>
-                    <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-                      <Item3 />
-                    </Float>
-                  </Suspense>
+                  <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
+                    <Item3 />
+                  </Float>
                   <Environment preset="sunset" />
                   <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
                 </Canvas>
               </Suspense>
             </div>
-          </div> */}
+          </div>
         </div>
         <div className="one-content-logos">
           <Marquee speed={50}>
