@@ -119,7 +119,9 @@ export const Section8 = () => {
         <div className="experience-one">
           <Suspense fallback={<Loading />}>
             <Canvas camera={{ position: [0, 0, isMobile ? 5.5 : 7.5], fov: 35 }}>
-              <Sphere />
+              <Suspense>
+                <Sphere />
+              </Suspense>
               <Environment preset="night" />
             </Canvas>
           </Suspense>

@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Loading from "../../Loading";
 // import { useAnimateText } from "../ScrollAnimations";
 
 export const SectionVideoMobile = () => {
@@ -45,7 +46,7 @@ export const SectionVideoMobile = () => {
                       </div>
                     </div>
                 </div>
-                <Suspense>
+                <Suspense fallback={<Loading />} >
                     <div id="scrolly-video" className="video-background"></div>
                 </Suspense>
             </section>

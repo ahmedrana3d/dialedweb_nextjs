@@ -121,15 +121,17 @@ export const Section1 = ({ section3Ref }) => {
           </div>
           <div className="one-content-right">
             <div className="one-content-right-experience" >
-              <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
-                <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
-                <Suspense >
-                  <Item3 />
-                  </Suspense>
-                </Float>
-                <Environment preset="sunset" />
-                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
-              </Canvas>
+              <Suspense fallback={ <Loading /> } >
+                <Canvas camera={{ position: [isMobile ? 0 : 5, 0, isMobile ? 8.5 : 12], fov: 35 }}>
+                  <Float rotationIntensity={0.5} floatIntensity={2} speed={2}>
+                    <Suspense>
+                      <Item3 />
+                    </Suspense>
+                  </Float>
+                  <Environment preset="sunset" />
+                  <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} enableRotate={true} enablePan={false} />
+                </Canvas>
+              </Suspense>
             </div>
           </div>
         </div>

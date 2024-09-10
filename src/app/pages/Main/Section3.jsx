@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
+import Loading from "../../Loading";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -52,7 +53,7 @@ export const Section3 = () => {
         {!isMobile && (
           <div className="three-content-box-right">
             <div className="container">
-              <Suspense>
+              <Suspense fallback={ <Loading /> } >
                 <video loading="lazy" className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop></video>
               </Suspense>
             </div>
@@ -71,7 +72,7 @@ export const Section3 = () => {
           {isMobile && (
             <div className="three-content-box-right">
               <div className="container">
-                <Suspense>
+                <Suspense fallback={ <Loading /> } >
                   <video loading="lazy" className="three-video" src="/laptop3.webm" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop></video>
                 </Suspense>
               </div>

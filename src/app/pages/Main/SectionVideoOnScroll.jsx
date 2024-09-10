@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
+import Loading from "../../Loading";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -190,7 +191,7 @@ export const SectionScrollVideoOnScroll = () => {
                         <h1 className="headline scroll-headline-8" ref={titleRef8} >Bloom</h1>
                     </div>
                 </div>
-                <Suspense>
+                <Suspense fallback={<Loading />} >
                     <div id="scrolly-video" className="video-background"></div>
                 </Suspense>
                 <div className="floating-div" ref={floatingDiv}>
