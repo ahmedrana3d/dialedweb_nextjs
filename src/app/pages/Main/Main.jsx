@@ -16,12 +16,12 @@ const Main = () => {
   const section3Ref = useRef(null);
   const section6Ref = useRef(null);
 
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setIsMobile(window.innerWidth <= 768);
-    }
+    // if (typeof window !== 'undefined') {
+    //   setIsMobile(window.innerWidth <= 768);
+    // }
 
     window.scrollTo(0, 0);
   }, []);
@@ -38,8 +38,8 @@ const Main = () => {
         <Section6 />
       </div>
       <Section4 />
-      {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
-      {/* <SectionScrollVideoOnScroll /> */}
+      {/* {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />} */}
+      <SectionScrollVideoOnScroll />
       <Section8 />
       <SectionFooter />
     </ReactLenis>
