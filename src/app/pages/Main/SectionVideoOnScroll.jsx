@@ -5,21 +5,10 @@ import gsap from "gsap";
 import { TextPlugin } from 'gsap/TextPlugin';
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
-import Loading from "../../Loading";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
 export const SectionScrollVideoOnScroll = () => {
-
-    const [isMobile, setIsMobile] = useState(false);
-
-    // ISMOBILE
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-          setIsMobile(window.innerWidth <= 768);
-        }
-      })
 
     // SCROLLY VIDEO
 
@@ -30,7 +19,7 @@ export const SectionScrollVideoOnScroll = () => {
         script.onload = () => {
             new ScrollyVideo({
                 scrollyVideoContainer: "scrolly-video",
-                src: isMobile ? "/flowermobile.mp4" : "/flowerkey3.mp4",
+                src: "/flowerkey3.mp4",
                 transitionSpeed: 14,
                 frameThreshold: 0.01,
                 full: true,
@@ -189,7 +178,6 @@ export const SectionScrollVideoOnScroll = () => {
             <section className="section scroll-video-on-scroll" onMouseEnter={() => { handleMouseEnter(); }} onMouseLeave={() => { handleMouseLeave(); }} >
                 <div className="scroll-video-on-scroll-items">
                     <div className="scroll-video-items-wrapper">
-                        <div className="scroll-video-items-wrapper-inside">
                         <h1 className="headline scroll-headline-1" ref={titleRef1} >Grow</h1>
                         <h1 className="headline scroll-headline-2" ref={titleRef2} >your</h1>
                         <h1 className="headline scroll-headline-3 scroll-purple" ref={titleRef3} >Digital</h1>
@@ -200,10 +188,9 @@ export const SectionScrollVideoOnScroll = () => {
                         <h1 className="headline scroll-headline-7 scroll-purple" ref={titleRef7} >Vision</h1>
                         <motion.div ref={boxRef2} whileHover={{ scale: 2, rotate: -10 }} transition={{ type: "tween", stiffness: 400, damping: 10 }} className="box-between-words-big box-between-words-image-3" />
                         <h1 className="headline scroll-headline-8" ref={titleRef8} >Bloom</h1>
-                        </div>
                     </div>
                 </div>
-                <Suspense fallback={<Loading />} >
+                <Suspense>
                     <div id="scrolly-video" className="video-background"></div>
                 </Suspense>
                 <div className="floating-div" ref={floatingDiv}>

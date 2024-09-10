@@ -38,8 +38,8 @@ const Main = () => {
         <Section6 />
       </div>
       <Section4 />
-      {/* {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />} */}
-      <SectionScrollVideoOnScroll />
+      {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
+      {/* <SectionScrollVideoOnScroll /> */}
       <Section8 />
       <SectionFooter />
     </ReactLenis>
