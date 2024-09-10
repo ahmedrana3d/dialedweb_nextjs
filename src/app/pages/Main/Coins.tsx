@@ -11,13 +11,13 @@ const count = 8;
 function Item(props: GroupProps) {
   const ref = useRef<THREE.Group>(null);
 
-  useFrame(() => {
-    if (ref.current) {
-      ref.current.rotation.x += 0.01;
-      ref.current.rotation.y += 0.01;
-      ref.current.rotation.z += 0.01;
-    }
-  });
+  // useFrame(() => {
+  //   if (ref.current) {
+  //     ref.current.rotation.x += 0.01;
+  //     ref.current.rotation.y += 0.01;
+  //     ref.current.rotation.z += 0.01;
+  //   }
+  // });
 
   return (
     <group {...props}>
@@ -31,11 +31,11 @@ function Item(props: GroupProps) {
 export const Item3 = () => {
   const groupRef = useRef<THREE.Group>(null!);
 
-  useFrame(() => {
-    if (groupRef.current) {
-      groupRef.current.rotation.z -= 0.01;
-    }
-  });
+  // useFrame(() => {
+  //   if (groupRef.current) {
+  //     groupRef.current.rotation.z -= 0.01;
+  //   }
+  // });
 
   return (
     <Center>
