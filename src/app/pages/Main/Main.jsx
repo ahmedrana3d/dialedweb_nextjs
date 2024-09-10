@@ -38,7 +38,7 @@ const Main = () => {
         <Section6 />
       </div>
       <Section4 />
-      {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />}
+      {/* {isMobile ? <SectionVideoMobile /> : <SectionScrollVideoOnScroll />} */}
       <SectionScrollVideoOnScroll />
       <Section8 />
       <SectionFooter />
