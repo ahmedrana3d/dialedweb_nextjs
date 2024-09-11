@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,160 +16,175 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 const Page4 = () => {
   const statRef = useRef(true);
 
-  useEffect(() => {
-    if (statRef.current) {
-      const animationsTriggered = {};
 
-      const tl = gsap.timeline({
-        ease: "power0",
-        scrollTrigger: {
-          trigger: ".scroller-pin",
-          //  endTrigger : endTrigger.current,
-          start: "center center",
-          end: `+=400%`,
-          ease: "none",
-          scrub: true,
-          pin: true,
-          // markers: true,
-        },
-      });
+  const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-      // Function to update opacity based on scale
-      const updateOpacity = (element, scale) => {
-        const opacity = scale === 1 ? 0 : 1;
-        gsap.set(element, { opacity: opacity });
-      };
 
-      const highlightText = (element) => {
-        gsap.to(`.tes-button.${element}`, { opacity: 1 });
-        gsap.to(`.tes-button:not(.${element})`, {
-          opacity: 0.5,
+  useIsomorphicLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+     
+      if (statRef.current) {
+        const animationsTriggered = {};
+  
+        const tl = gsap.timeline({
+          ease: "power0",
+          scrollTrigger: {
+            trigger: ".scroller-pin",
+            //  endTrigger : endTrigger.current,
+            start: "center center",
+            end: `+=400%`,
+            ease: "none",
+            scrub: true,
+            pin: true,
+            // markers: true,
+          },
         });
-      };
-
-      tl.fromTo(
-        statRef.current,
-        { translateY: "1%" },
-        { translateY: "-18%", ease: "none" },
-        ">"
-      )
-        .to(
-          ".image-1",
+  
+        // Function to update opacity based on scale
+        const updateOpacity = (element, scale) => {
+          const opacity = scale === 1 ? 0 : 1;
+          gsap.set(element, { opacity: opacity });
+        };
+  
+        const highlightText = (element) => {
+          gsap.to(`.tes-button.${element}`, { opacity: 1 });
+          gsap.to(`.tes-button:not(.${element})`, {
+            opacity: 0.5,
+          });
+        };
+  
+        tl.fromTo(
+          statRef.current,
+          { translateY: "1%" },
+          { translateY: "-18%", ease: "none" },
+          ">"
+        )
+          .to(
+            ".image-1",
+            {
+              scale: 1,
+              ease: "none",
+              onUpdate: function () {
+                updateOpacity(".image-1", this.targets()[0]._gsap.scaleX);
+                highlightText("user-eng");
+              },
+            },
+            "<"
+          )
+          .to(
+            ".image-2",
+            {
+              scale: 0.9,
+              ease: "none",
+            },
+            "<"
+          )
+          .to(
+            ".image-3",
+            {
+              scale: 0.8,
+              ease: "none",
+            },
+            "<"
+          )
+          .to(
+            ".image-4",
+            {
+              scale: 0.7,
+              ease: "none",
+            },
+            "<"
+          );
+  
+        tl.fromTo(
+          statRef.current,
+          { translateY: "-18%" },
+          { translateY: "-44%", ease: "none" },
+          ">"
+        )
+          .to(
+            ".image-2",
+            {
+              scale: 1,
+              ease: "none",
+              onUpdate: function () {
+                updateOpacity(".image-2", this.targets()[0]._gsap.scaleX);
+                highlightText("conversion-rate");
+              },
+            },
+            "<"
+          )
+          .to(
+            ".image-3",
+            {
+              scale: 0.9,
+              ease: "none",
+            },
+            "<"
+          )
+          .to(
+            ".image-4",
+            {
+              scale: 0.8,
+              ease: "none",
+            },
+            "<"
+          );
+  
+        tl.fromTo(
+          statRef.current,
+          { translateY: "-44%" },
+          { translateY: "-70%", ease: "none" },
+          ">"
+        )
+          .to(
+            ".image-3",
+            {
+              scale: 1,
+              ease: "none",
+              onUpdate: function () {
+                updateOpacity(".image-3", this.targets()[0]._gsap.scaleX);
+                highlightText("customer-exp");
+              },
+            },
+            "<"
+          )
+          .to(
+            ".image-4",
+            {
+              scale: 0.9,
+              ease: "none",
+            },
+            "<"
+          );
+  
+        tl.fromTo(
+          statRef.current,
+          { translateY: "-70%" },
+          { translateY: "-79%", ease: "none" },
+          ">"
+        ).to(
+          ".image-4",
           {
             scale: 1,
             ease: "none",
-            onUpdate: function () {
-              updateOpacity(".image-1", this.targets()[0]._gsap.scaleX);
-              highlightText("user-eng");
+            onUpdate: () => {
+              highlightText("brand-img");
             },
           },
           "<"
-        )
-        .to(
-          ".image-2",
-          {
-            scale: 0.9,
-            ease: "none",
-          },
-          "<"
-        )
-        .to(
-          ".image-3",
-          {
-            scale: 0.8,
-            ease: "none",
-          },
-          "<"
-        )
-        .to(
-          ".image-4",
-          {
-            scale: 0.7,
-            ease: "none",
-          },
-          "<"
         );
+      }
 
-      tl.fromTo(
-        statRef.current,
-        { translateY: "-18%" },
-        { translateY: "-44%", ease: "none" },
-        ">"
-      )
-        .to(
-          ".image-2",
-          {
-            scale: 1,
-            ease: "none",
-            onUpdate: function () {
-              updateOpacity(".image-2", this.targets()[0]._gsap.scaleX);
-              highlightText("conversion-rate");
-            },
-          },
-          "<"
-        )
-        .to(
-          ".image-3",
-          {
-            scale: 0.9,
-            ease: "none",
-          },
-          "<"
-        )
-        .to(
-          ".image-4",
-          {
-            scale: 0.8,
-            ease: "none",
-          },
-          "<"
-        );
 
-      tl.fromTo(
-        statRef.current,
-        { translateY: "-44%" },
-        { translateY: "-70%", ease: "none" },
-        ">"
-      )
-        .to(
-          ".image-3",
-          {
-            scale: 1,
-            ease: "none",
-            onUpdate: function () {
-              updateOpacity(".image-3", this.targets()[0]._gsap.scaleX);
-              highlightText("customer-exp");
-            },
-          },
-          "<"
-        )
-        .to(
-          ".image-4",
-          {
-            scale: 0.9,
-            ease: "none",
-          },
-          "<"
-        );
-
-      tl.fromTo(
-        statRef.current,
-        { translateY: "-70%" },
-        { translateY: "-79%", ease: "none" },
-        ">"
-      ).to(
-        ".image-4",
-        {
-          scale: 1,
-          ease: "none",
-          onUpdate: () => {
-            highlightText("brand-img");
-          },
-        },
-        "<"
-      );
-    }
+    });
+    return () => ctx.revert(); // <-- CLEANUP!
   }, []);
+
+
+
+
+
 
   function takeToElement(element) {
     const targetElement = document.getElementById(`${element}`);

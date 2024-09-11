@@ -8,61 +8,70 @@ const FirstSection = () => {
   const headText = useRef();
   const el = useRef();
 
-  useLayoutEffect(() => {
-    const tl = gsap.timeline();
 
-    tl.fromTo(
-      ".line-inner",
-      {
-        x: 0,
-        opacity: 0,
-        y: "2em",
-        rotationX: -60,
-        rotationY: -20,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        y: 0,
-        delay: 0.5,
-        rotationX: 0,
-        rotationY: 0,
-        duration: 1,
-        stagger: 0.05,
-        ease: "power2.out",
-      }
-    );
+  const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-    tl.fromTo(
-      ".line-inner",
-      {
-        x: 0,
-        y: 0,
-        rotationX: 0,
-        rotationY: 0,
-        duration: 1,
-      },
-      {
-        x: 0,
-        y: "1.5em",
-        rotationX: -60,
-        rotationY: -20,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: headText.current,
-          start: "center center",
-          end: "+=55%",
-          scrub: true,
+
+  useIsomorphicLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+     
+      const tl = gsap.timeline();
+
+      tl.fromTo(
+        ".line-inner",
+        {
+          x: 0,
+          opacity: 0,
+          y: "2em",
+          rotationX: -60,
+          rotationY: -20,
         },
-      }
-    );
+        {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          delay: 0.5,
+          rotationX: 0,
+          rotationY: 0,
+          duration: 1,
+          stagger: 0.05,
+          ease: "power2.out",
+        }
+      );
+  
+      tl.fromTo(
+        ".line-inner",
+        {
+          x: 0,
+          y: 0,
+          rotationX: 0,
+          rotationY: 0,
+          duration: 1,
+        },
+        {
+          x: 0,
+          y: "1.5em",
+          rotationX: -60,
+          rotationY: -20,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: headText.current,
+            start: "center center",
+            end: "+=55%",
+            scrub: true,
+          },
+        }
+      );
 
-    // Cleanup function to kill any existing tweens
-    return () => {
-      tl.kill();
-      gsap.killTweensOf(".line-inner");
-    };
+
+
+    });
+    return () => ctx.revert(); // <-- CLEANUP!
   }, []);
+
+
+
+
 
   return (
     <>

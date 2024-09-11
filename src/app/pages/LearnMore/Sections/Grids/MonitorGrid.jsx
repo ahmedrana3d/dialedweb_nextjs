@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Lottie from "lottie-react";
@@ -25,50 +25,64 @@ const MonitorGrid = () => {
   const textRef = useRef();
   const numberRef = useRef();
   const [isFollowed, setIsFollowed] = useState(false);
+  
 
-  useEffect(() => {
-    const split = new SplitText(textRef.current, { type: "words, chars" });
 
-    gsap.fromTo(
-      split.chars,
-      { opacity: 0.1 },
-      {
-        opacity: 1,
-        duration: 0.5,
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: textRef.current,
-          start: "top 99%",
-          end: "top 99%",
-          // markers: true,
-          toggleActions: "play none reset none",
-        },
-      }
-    );
 
-    gsap.fromTo(
-      numberRef.current,
-      { innerText: "0%" },
-      {
-        duration: 2,
-        innerText: "90%",
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: numberRef.current,
-          start: "top 99%",
-          end: "top 99%",
-          // markers: true,
-          toggleActions: "play none reset none",
-        },
-        snap: { innerText: 1 },
-        onUpdate: function () {
-          numberRef.current.innerText = `${Math.round(
-            parseFloat(this.targets()[0].innerText)
-          )}%`;
-        },
-      }
-    );
+  const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
+
+  useIsomorphicLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+     
+      const split = new SplitText(textRef.current, { type: "words, chars" });
+
+      gsap.fromTo(
+        split.chars,
+        { opacity: 0.1 },
+        {
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: "top 99%",
+            end: "top 99%",
+            // markers: true,
+            toggleActions: "play none reset none",
+          },
+        }
+      );
+  
+      gsap.fromTo(
+        numberRef.current,
+        { innerText: "0%" },
+        {
+          duration: 2,
+          innerText: "90%",
+          stagger: 0.05,
+          scrollTrigger: {
+            trigger: numberRef.current,
+            start: "top 99%",
+            end: "top 99%",
+            // markers: true,
+            toggleActions: "play none reset none",
+          },
+          snap: { innerText: 1 },
+          onUpdate: function () {
+            numberRef.current.innerText = `${Math.round(
+              parseFloat(this.targets()[0].innerText)
+            )}%`;
+          },
+        }
+      );
+
+    });
+    return () => ctx.revert(); // <-- CLEANUP!
   }, []);
+
+
+
 
   return (
     <div className="w-screen h-[100vh] flex justify-center items-center bg-transparent  ">

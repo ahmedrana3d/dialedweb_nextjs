@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,67 +9,78 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 const Page3 = () => {
   const meterContainer = useRef(true);
   const parent = useRef(null);
-  // const svgPath = useRef(null);
-  useEffect(() => {
-    if (meterContainer.current) {
-      // GSAP Timeline Configuration
-      const tl = gsap.timeline({
-        ease: "power0",
-        scrollTrigger: {
-          trigger: ".parent-web-stats",
-          start: "top top",
-          end: `+=280%`,
-          scrub: true,
-          pin: true,
-          // pinSpacing: true,
-          onEnter: () => {
-            ScrollTrigger.refresh();
+
+  const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
+
+  useIsomorphicLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+     
+
+      if (meterContainer.current) {
+        // GSAP Timeline Configuration
+        const tl = gsap.timeline({
+          ease: "power0",
+          scrollTrigger: {
+            trigger: ".parent-web-stats",
+            start: "top top",
+            end: `+=280%`,
+            scrub: true,
+            pin: true,
+            // pinSpacing: true,
+            onEnter: () => {
+              ScrollTrigger.refresh();
+            },
           },
-        },
-      });
+        });
+  
+        // Animate .number-stats from x: 130% to x: -130%
+        tl.fromTo(
+          ".number-stats",
+          { x: "130%" },
+          { x: "-120%", duration: 1 },
+          "<"
+        );
+  
+        // Animate .odo-meter and .make-your opacity in parallel to the .number-stats animation
+        tl.to(
+          ".odo-meter",
+          {
+            opacity: 0,
+            duration: 0.1,
+            ease: "none",
+          },
+          "-=0.7"
+        ); // Start the opacity change 0.7 seconds before the end of the number-stats animation
+  
+        tl.to(
+          ".make-your",
+          {
+            opacity: 1,
+            duration: 0.1,
+            ease: "none",
+          },
+          "-=0.7"
+        ); // Start the opacity change 0.7 seconds before the end of the number-stats animation
+  
+        gsap.to(".clip-path-svg", {
+          duration: 1,
+          clipPath: "inset(0px 0px calc(10%))",
+          scrollTrigger: {
+            trigger: ".clip-path-svg",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            // markers: true,
+          },
+        });
+      }
 
-      // Animate .number-stats from x: 130% to x: -130%
-      tl.fromTo(
-        ".number-stats",
-        { x: "130%" },
-        { x: "-120%", duration: 1 },
-        "<"
-      );
 
-      // Animate .odo-meter and .make-your opacity in parallel to the .number-stats animation
-      tl.to(
-        ".odo-meter",
-        {
-          opacity: 0,
-          duration: 0.1,
-          ease: "none",
-        },
-        "-=0.7"
-      ); // Start the opacity change 0.7 seconds before the end of the number-stats animation
-
-      tl.to(
-        ".make-your",
-        {
-          opacity: 1,
-          duration: 0.1,
-          ease: "none",
-        },
-        "-=0.7"
-      ); // Start the opacity change 0.7 seconds before the end of the number-stats animation
-
-      gsap.to(".clip-path-svg", {
-        duration: 1,
-        clipPath: "inset(0px 0px calc(10%))",
-        scrollTrigger: {
-          trigger: ".clip-path-svg",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-          // markers: true,
-        },
-      });
-    }
+    });
+    return () => ctx.revert(); // <-- CLEANUP!
   }, []);
+
 
   return (
     <div

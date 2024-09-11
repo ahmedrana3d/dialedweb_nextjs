@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap, { ScrollTrigger, SplitText, TextPlugin } from "gsap/all";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -10,103 +10,114 @@ const ThirdPage = () => {
   const headText2Ref = useRef(null);
   const svgPath = useRef(null);
 
-  useEffect(() => {
-    const splitPara = new SplitText(paraRef.current, { type: "words, chars" });
-    const splitHead1 = new SplitText(headText1Ref.current, { type: "words" });
-    const splitHead2 = new SplitText(headText2Ref.current, { type: "words" });
+  const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-    gsap.fromTo(
-      splitPara.words,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        stagger: 0.01,
-        scrollTrigger: {
-          trigger: paraRef.current,
-          start: "top 99%",
-          end: "top 99%",
-          toggleActions: "play none reset none",
+
+  useIsomorphicLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+     
+      const splitPara = new SplitText(paraRef.current, { type: "words, chars" });
+      const splitHead1 = new SplitText(headText1Ref.current, { type: "words" });
+      const splitHead2 = new SplitText(headText2Ref.current, { type: "words" });
+  
+      gsap.fromTo(
+        splitPara.words,
+        {
+          opacity: 0,
+          y: 50,
         },
-      }
-    );
-
-    gsap.fromTo(
-      splitHead1.words,
-      {
-        y: 250,
-      },
-      {
-        y: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        stagger: 0.3,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.01,
+          scrollTrigger: {
+            trigger: paraRef.current,
+            start: "top 99%",
+            end: "top 99%",
+            toggleActions: "play none reset none",
+          },
+        }
+      );
+  
+      gsap.fromTo(
+        splitHead1.words,
+        {
+          y: 250,
+        },
+        {
+          y: 0,
+          duration: 1.5,
+          ease: "power3.out",
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: headText1Ref.current,
+            start: "top 99%",
+            end: "top 99%",
+            toggleActions: "play none reset none",
+          },
+        }
+      );
+  
+      gsap.fromTo(
+        splitHead2.words,
+        {
+          y: -250,
+        },
+        {
+          y: 0,
+          duration: 1.5,
+          ease: "power3.out",
+          stagger: {
+            each: 0.3,
+            from: "end",
+          },
+          scrollTrigger: {
+            trigger: headText2Ref.current,
+            start: "top 99%",
+            end: "top 99%",
+            toggleActions: "play none reset none",
+          },
+        }
+      );
+  
+      const path = svgPath.current;
+      const pathLength = path.getTotalLength();
+      path.style.strokeDasharray = pathLength;
+      path.style.strokeDashoffset = pathLength;
+  
+      gsap.fromTo(
+        path,
+        { strokeDashoffset: pathLength },
+        {
+          strokeDashoffset: 0,
+          scrollTrigger: {
+            trigger: path,
+            start: "top center",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+  
+      gsap.to(headText1Ref.current, {
+        x: "18%",
         scrollTrigger: {
           trigger: headText1Ref.current,
-          start: "top 99%",
-          end: "top 99%",
-          toggleActions: "play none reset none",
-        },
-      }
-    );
-
-    gsap.fromTo(
-      splitHead2.words,
-      {
-        y: -250,
-      },
-      {
-        y: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        stagger: {
-          each: 0.3,
-          from: "end",
-        },
-        scrollTrigger: {
-          trigger: headText2Ref.current,
-          start: "top 99%",
-          end: "top 99%",
-          toggleActions: "play none reset none",
-        },
-      }
-    );
-
-    const path = svgPath.current;
-    const pathLength = path.getTotalLength();
-    path.style.strokeDasharray = pathLength;
-    path.style.strokeDashoffset = pathLength;
-
-    gsap.fromTo(
-      path,
-      { strokeDashoffset: pathLength },
-      {
-        strokeDashoffset: 0,
-        scrollTrigger: {
-          trigger: path,
           start: "top center",
           end: "bottom top",
           scrub: true,
+          // markers: true,
         },
-      }
-    );
+      });
+   
 
-    gsap.to(headText1Ref.current, {
-      x: "18%",
-      scrollTrigger: {
-        trigger: headText1Ref.current,
-        start: "top center",
-        end: "bottom top",
-        scrub: true,
-        // markers: true,
-      },
     });
+    return () => ctx.revert(); // <-- CLEANUP!
   }, []);
 
+
+ 
   return (
     <div className="w-screen h-auto bg-black flex flex-col items-center gap-12 md:gap-0 md:items-start ">
       <svg
