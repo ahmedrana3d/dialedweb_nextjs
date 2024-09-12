@@ -414,101 +414,106 @@ const Page4 = () => {
           ></div>
         </div>
       </section>
+      <section className="flex justify-center items-center h-screen w-screen">
+  <Swiper
+    effect={"coverflow"}
+    grabCursor={true}
+    centeredSlides={true}
+    loop={true}
+    slidesPerView={1}
+    slidesPerGroup={1}
+    coverflowEffect={{
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2.5,
+    }}
+    pagination={{ el: ".swiper-pagination", clickable: true }}
+    modules={[EffectCoverflow, Pagination, Navigation]}
+    className="swiper_container flex justify-center items-center"
+  >
+    <SwiperSlide className="flex justify-center items-center">
+      <div className="relative flex items-center flex-col justify-center">
+        <Image
+          src="/soda_image.jpg"
+          alt="slide_image"
+          width={1000}
+          height={1000}
+          className="h-[20rem] object-cover rounded-[2rem] w-11/12"
+        />
+        <div className="tes-content  mb-[2rem] w-5/6 bg-black bg-opacity-50 p-4 rounded-lg text-center text-white">
+          <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight">
+            Increase User Engagement with Interactivity
+          </h6>
+          <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
+            Websites with interactive elements see a 40% increase in user time spent on site
+          </h6>
+        </div>
+      </div>
+    </SwiperSlide>
 
-      <section className=" flex justify-center items-center md:hidden h-screen w-screen">
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={1}
-          slidesPerGroup={1}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container flex justify-center items-center"
-        >
-          <SwiperSlide>
-            <Image
-              src="/soda_image.jpg"
-              alt="slide_image"
-              width={1000}
-              height={1000}
-              className="h-[20rem] object-cover rounded-[2rem] w-11/12"
-            />
-            <div className="tes-content h-auto pt-[2rem] flex flex-col justify-between text-center gap-4 text-white w-5/6 bg-black bg-opacity-50 p-4 rounded-lg">
-              <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight ">
-                Increase User Engagement with Interactivity
-              </h6>
-              <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
-                Websites with interactive elements see a 40% increase in user
-                time spent on site
-              </h6>
-            </div>
-          </SwiperSlide>
+    <SwiperSlide className="flex justify-center items-center">
+      <div className="relative flex flex-col items-center justify-center">
+        <Image
+          src="/car_image.jpg"
+          alt="slide_image"
+          width={1000}
+          height={1000}
+          className="h-[20rem] object-cover rounded-[2rem] w-11/12"
+        />
+        <div className="tes-content  mb-[2rem] w-5/6 bg-black bg-opacity-50 p-4 rounded-lg text-center text-white">
+          <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight">
+            Transform Sales with 3D Product Configurations
+          </h6>
+          <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
+            3D product views can increase conversion rates by up to 250%
+          </h6>
+        </div>
+      </div>
+    </SwiperSlide>
 
-          <SwiperSlide>
-            <Image
-              src="/car_image.jpg"
-              alt="slide_image"
-              width={1000}
-              height={1000}
-              className="h-[20rem] object-cover rounded-[2rem]  w-11/12"
-            />
+    <SwiperSlide className="flex justify-center  items-center">
+      <div className="relative flex items-center flex-col justify-center">
+        <Image
+          src="/player_image.jpg"
+          alt="slide_image"
+          width={1000}
+          height={1000}
+          className="h-[20rem] object-cover rounded-[2rem] w-11/12"
+        />
+        <div className="tes-content  mb-[2rem] w-5/6 bg-black bg-opacity-50 p-4 rounded-lg text-center text-white">
+          <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight">
+            Get ahead of the curve.
+          </h6>
+          <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
+            A 3D website sets your brand apart from competitors by offering a cutting-edge, modern online experience.
+          </h6>
+        </div>
+      </div>
+    </SwiperSlide>
 
-            <div className="tes-content h-auto pt-[2rem] flex flex-col justify-between text-center gap-4 text-white w-5/6 bg-black bg-opacity-50 p-4 rounded-lg">
-              <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight ">
-                Transform Sales with 3D Product Configurations
-              </h6>
-              <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
-                3D product views can increase conversion rates by up to 250%
-              </h6>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image
-              src="/player_image.jpg"
-              alt="slide_image"
-              width={1000}
-              height={1000}
-              className="h-[20rem] object-cover rounded-[2rem]  w-11/12"
-            />
-            <div className="tes-content h-auto pt-[2rem] flex flex-col justify-between text-center gap-4 text-white w-5/6 bg-black bg-opacity-50 p-4 rounded-lg">
-              <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight ">
-                Get ahead of the curve.
-              </h6>
-              <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
-                A 3D website sets your brand apart from competitors by offering
-                a cutting-edge, modern online experience.
-              </h6>
-            </div>
-          </SwiperSlide>
+    <SwiperSlide className="flex justify-center items-center">
+      <div className="relative flex items-center flex-col justify-center">
+        <Image
+          src="/vr_image.jpg"
+          alt="slide_image"
+          width={1000}
+          height={1000}
+          className="h-[20rem] object-cover rounded-[2rem] w-11/12"
+        />
+        <div className="tes-content  mb-[2rem] w-5/6 bg-black bg-opacity-50 p-4 rounded-lg text-center text-white">
+          <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight">
+            Avoid Losing Customers, Enhance User Experience
+          </h6>
+          <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
+            89% of consumers turn to a competitor after a poor user experience
+          </h6>
+        </div>
+      </div>
+    </SwiperSlide>
+  </Swiper>
+</section>
 
-          <SwiperSlide>
-            <Image
-              src="/vr_image.jpg"
-              alt="slide_image"
-              width={1000}
-              height={1000}
-              className="h-[20rem] object-cover rounded-[2rem]  w-11/12"
-            />
-            <div className="tes-content h-auto pt-[2rem] flex flex-col justify-between text-center gap-4 text-white w-5/6 bg-black bg-opacity-50 p-4 rounded-lg">
-              <h6 className="text-2xl font-bold tracking-wide capitalize leading-tight ">
-                Avoid Losing Customers, Enhance User Experience
-              </h6>
-              <h6 className="text-lg leading-relaxed text-shadow text-slate-200">
-                89% of consumers turn to a competitor after a poor user
-                experience
-              </h6>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </section>
     </>
   );
 };
