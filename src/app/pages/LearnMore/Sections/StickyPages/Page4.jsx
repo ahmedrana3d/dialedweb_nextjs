@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -341,7 +342,7 @@ const Page4 = () => {
                       opacity: 2.132,
                       zIndex: 4,
                     }}
-                    src="./soda_image.jpg"
+                    src="/soda_image.jpg"
                   />
                 </div>
                 <div className="test-img-mask">
@@ -433,8 +434,8 @@ const Page4 = () => {
           className="swiper_container flex justify-center items-center"
         >
           <SwiperSlide>
-            <img
-              src="./soda_image.jpg"
+            <Image
+              src="/soda_image.jpg"
               alt="slide_image"
               width={1000}
               height={1000}
@@ -452,8 +453,8 @@ const Page4 = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <img
-              src="./car_image.jpg"
+            <Image
+              src="/car_image.jpg"
               alt="slide_image"
               width={1000}
               height={1000}
@@ -470,8 +471,8 @@ const Page4 = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              src="./player_image.jpg"
+            <Image
+              src="/player_image.jpg"
               alt="slide_image"
               width={1000}
               height={1000}
@@ -489,8 +490,8 @@ const Page4 = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <img
-              src="./vr_image.jpg"
+            <Image
+              src="/vr_image.jpg"
               alt="slide_image"
               width={1000}
               height={1000}

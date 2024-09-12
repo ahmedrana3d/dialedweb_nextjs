@@ -36,6 +36,10 @@ module.exports = {
             transform: "rotate(-360deg)",
           },
         },
+        "grid-move": {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
           "70%": { opacity: 1 },
@@ -57,7 +61,9 @@ module.exports = {
         "border-spin": "border-spin 15s linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         meteor: "meteor 5s linear infinite",
+        grid: "grid-move 15s linear infinite",
       },
+      
     },
   },
   darkMode: "class",
