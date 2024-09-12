@@ -16,7 +16,7 @@ export default function RetroGrid({ className, angle = 65 }) {
               [margin-left:-50%] 
               [transform-origin:100%_0_0] 
               [width:600vw]
-              [background-image:linear-gradient(to_right,rgba(255,255,255,0.3)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.3)_1px,transparent_0)]
+              [background-image:linear-gradient(to_right,rgba(255,255,255,0.15)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.15)_1px,transparent_0)]
             "
           />
         </div>
